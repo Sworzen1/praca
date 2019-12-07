@@ -8,7 +8,8 @@ const useStyles = makeStyles({
     height: "60vh"
   },
   main2: {
-    display: "flex"
+    display: "grid",
+    gridTemplateColumns:"auto auto auto"
   }
 });
 

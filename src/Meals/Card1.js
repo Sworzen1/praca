@@ -21,7 +21,8 @@ const useStyles = makeStyles({
   },
   img: {
     height: 140,
-    backgroundImage: `url(${placki})`
+    backgroundImage: `url(${placki})`,
+    
   }
 });
 
@@ -38,7 +39,7 @@ const styles = theme => ({
   }
 });
 
-const Card1 = () => {
+const Card1 = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -100,11 +101,10 @@ const Card1 = () => {
         <CardMedia className={classes.img} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Placuszki
+            {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl
-            na smaczne śniadanie
+            {props.description}
           </Typography>
         </CardContent>
 
@@ -124,23 +124,11 @@ const Card1 = () => {
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          Modal title
+         {props.titleRecipe}
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
+          {props.descRecipe}
           </Typography>
         </DialogContent>
         <DialogActions>

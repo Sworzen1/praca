@@ -1,6 +1,7 @@
 import React from "react";
 import Card1 from "./Card1";
 import { makeStyles } from "@material-ui/core/styles";
+import recipesbreakfast from "./recipesbreakfast.json";
 
 const useStyles = makeStyles({
   main1: {
@@ -8,7 +9,9 @@ const useStyles = makeStyles({
     height: "60vh"
   },
   main2: {
-    display: "flex"
+    display: "grid",
+    gridTemplateColumns:"auto auto auto"
+    
   }
 });
 
@@ -18,15 +21,13 @@ const Breakfast = () => {
   return (
     <div className={classes.main1}>
       <div className={classes.main2}>
-        <Card1 />
-        <Card1 />
-        <Card1 />
+      {recipesbreakfast.map(item=>{
+        return (
+          <Card1 title={item.title} description={item.description} titleRecipe={item.titleRecipe} descRecipe={item.descRecipe}/>
+        )
+      })}
       </div>
-      <div className={classes.main2}>
-        <Card1 />
-        <Card1 />
-        <Card1 />
-      </div>
+
     </div>
   );
 };

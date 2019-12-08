@@ -1,6 +1,7 @@
 import React from "react";
 import Card1 from "./Card1";
 import { makeStyles } from "@material-ui/core/styles";
+import recipeslunch from "./recipeslunch"
 
 const useStyles = makeStyles({
   main1: {
@@ -19,14 +20,11 @@ const Lunch = () => {
   return (
     <div className={classes.main1}>
       <div className={classes.main2}>
-        <Card1 />
-        <Card1 />
-        <Card1 />
-      </div>
-      <div className={classes.main2}>
-        <Card1 />
-        <Card1 />
-        <Card1 />
+      {recipeslunch.map(item=>{
+        return (
+          <Card1 title={item.title} description={item.description} titleRecipe={item.titleRecipe} descRecipe={item.descRecipe}/>
+        )
+      })}
       </div>
     </div>
   );

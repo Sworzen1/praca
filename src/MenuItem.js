@@ -8,16 +8,21 @@ const useStyles = makeStyles(theme => ({
 
   link: {
     textDecoration: "none",
-   
-    padding: 20,
+       padding: 20,
     listStyle: "none",
-    background: "yellow",
+    background: "#17161a",
     marginTop: 20,
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    
-  }
+    height:"70px",
+    color:"white",
+    fontSize:20,
+    '&:hover':{
+      borderRight:"5px solid red",
+    }
+  },
+
 }));
 
 const MenuItem = (props) => {
@@ -30,8 +35,9 @@ const MenuItem = (props) => {
         exact
         className={classes.link}
         activeStyle={{
-          background: "white"
-        }}
+          background: "#17161a",
+          borderRight:"5px solid red",
+          }}
       >
         {props.title} 
       </NavLink>

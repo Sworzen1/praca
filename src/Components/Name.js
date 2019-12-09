@@ -6,7 +6,8 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     width: "200px",
     paddingTop: "10px",
-    left: 340
+    left: 340,
+    color:"white"
   },
   text: {
     border: "2px solid black ",
@@ -21,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     marginTop: "-11px",
     marginLeft: "10px",
     width: "50px",
-    background: "aquamarine",
+    background: "#17161a",
     zIndex: 1,
     textAlign: "center"
   },
@@ -34,7 +35,7 @@ const Name = () => {
   return (
     <div className={classes.main}>
       <div className={classes.text}>
-        <span className={classes.h1}>Imie</span>
+        <span className={classes.h1}>Name</span>
         <span className={classes.h2}>
           <h2>Weronika</h2>
         </span>

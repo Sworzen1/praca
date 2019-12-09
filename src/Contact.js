@@ -12,14 +12,15 @@ box1: {
 
   },
   box2: {
-    backgroundColor: "green",
+    backgroundColor: "rgba(15,15,15,.8)",
     width:'30%',
     height:'60%',
     padding:'30px',
+    color:"white"
     
   },
   h3:{
-    borderBottom:'1px solid yellow',
+    borderBottom:'1px solid red',
   },
   h4:{
     lineHeight:'2px',

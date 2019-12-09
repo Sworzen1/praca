@@ -14,9 +14,10 @@ code {
   display: flex;
 }
 .main {
-  background: aquamarine;
+  background: #17161a;
   flex-grow: 1;
   height: 100vh;
+
 }
 
 .navbar1 {

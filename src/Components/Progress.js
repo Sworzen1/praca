@@ -1,7 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
-import { display } from "@material-ui/system";
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -10,7 +9,7 @@ const BorderLinearProgress = withStyles({
     borderRadius: 50,
     backgroundColor: lighten("#ff6c5c", 0.5),
     textAlign: "center",
-    border: "solid 2px "
+    border: "solid 2px black"
   },
   bar: {
     borderRadius: 20,
@@ -24,32 +23,46 @@ const useStyles = makeStyles(theme => ({
   },
   ProgressBars: {
     textAlign: "center",
-    height: "242px",
     width: "300px",
     position: "absolute",
     right: 20,
-    top: 250
-  }
+    top: 120,
+    lineHeight:"1px" ,
+    color:"white"
+  },
+  all:{
+marginTop:"100px"
+  },
 }));
 
 const Progress = () => {
   const classes = useStyles();
+
+  const [count, setCounter ] = useState(0);
+
+  const Add = () =>  {
+    setCounter(count  +1);
+  } 
+
   return (
     <div className={classes.ProgressBars}>
       <div className={classes.all}>
-        <h4 className={classes.h4}>Weglowodany</h4>
+        <h4 className={classes.h4}>Carbohydrates</h4>
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={80}
+            value={70}
+            
           />
+          <output> {count} / 300</output>
+       
         </div>
       </div>
 
       <div className={classes.all}>
-        <h4 className={classes.h4}>Białko</h4>
+        <h4 className={classes.h4}>Proteins</h4>
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}
@@ -57,11 +70,12 @@ const Progress = () => {
             color="secondary"
             value={50}
           />
+           <output> {count} / 300</output>
         </div>
       </div>
 
       <div className={classes.all}>
-        <h4 className={classes.h4}>Tłuszcze</h4>
+        <h4 className={classes.h4}>Fats</h4>
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}
@@ -69,6 +83,7 @@ const Progress = () => {
             color="secondary"
             value={20}
           />
+           <output> {count} / 300</output>
         </div>
       </div>
     </div>

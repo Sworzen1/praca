@@ -8,8 +8,12 @@ height:"120px",
 display:'flex',
 alignItems:'center',
 justifyContent:'center',
-border:"2px solid",
+border:"2px solid black",
 borderRadius:10,
+position:"absolute",
+top:400,
+left:400,
+color:"white",
 },
 h1:{
 
@@ -34,8 +38,8 @@ const BMI = () => {
         <div className={classes.text}>
         <span className={classes.h1}>
             <h2 className={classes.h2}>35</h2>
-          <h3>Twoje BMI</h3>
-          <h4 className={classes.line}>Nadwaga</h4>
+          <h3>Your BMI</h3>
+          <h4 className={classes.line}>Overweight</h4>
           </span>
         
       </div>

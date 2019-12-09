@@ -10,7 +10,7 @@ const BorderLinearProgress = withStyles({
     backgroundColor: lighten("#ff6c5c", 0.5),
     textAlign: "center",
     background: "red",
-    border: "solid 2px ",
+    border: "solid 2px black",
     transform: "rotate(-90deg)"
   },
   bar: {
@@ -24,8 +24,9 @@ const useStyles = makeStyles(theme => ({
     width: "274px",
     textAlign: "center",
     margin: "0 auto",
-    paddingTop: "60px"
-  }
+    paddingTop: "60px",
+    color:"white"
+  },
 }));
 
 const Calories = () => {
@@ -33,7 +34,7 @@ const Calories = () => {
   return (
     <div className={classes.main}>
       <div className={classes.root}>
-        <h1 className={classes.h3}>Kalorie</h1>
+        <h1 className={classes.h3}>Calories</h1>
         <BorderLinearProgress
           className={classes.margin}
           variant="determinate"

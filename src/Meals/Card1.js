@@ -17,13 +17,21 @@ import CloseIcon from "@material-ui/icons/Close";
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
-    margin: "20px"
+    margin: "20px",
+    backgroundColor:"#17161a",
+    color:"white"
+    
   },
   img: {
     height: 140,
     backgroundImage: `url(${placki})`,
     
+    
+  },
+  typo2: {
+    color:"rgb(255,255,255,0.5)"
   }
+
 });
 
 const styles = theme => ({
@@ -100,10 +108,10 @@ const Card1 = (props) => {
       <Card className={classes.card}>
         <CardMedia className={classes.img} />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.typo1}>
             {props.title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.typo2}>
             {props.description}
           </Typography>
         </CardContent>

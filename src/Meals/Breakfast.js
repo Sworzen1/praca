@@ -23,7 +23,8 @@ const Breakfast = () => {
       <div className={classes.main2}>
       {recipesbreakfast.map(item=>{
         return (
-          <Card1 title={item.title} description={item.description} titleRecipe={item.titleRecipe} descRecipe={item.descRecipe}/>
+          <Card1 title={item.title} description={item.description} titleRecipe={item.titleRecipe} 
+          descRecipe={item.descRecipe} carbo={item.carbo} protein={item.protein} fat={item.fat} calories={item.calories}/>
         )
       })}
       </div>

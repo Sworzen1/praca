@@ -1,6 +1,7 @@
 import React from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import { useCalories } from "../Calories";
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -31,6 +32,9 @@ const useStyles = makeStyles(theme => ({
 
 const Calories = () => {
   const classes = useStyles();
+  
+  const { calories } = useCalories()
+
   return (
     <div className={classes.main}>
       <div className={classes.root}>
@@ -40,7 +44,9 @@ const Calories = () => {
           variant="determinate"
           color="secondary"
           value={30}
+          
         />
+         <output> {calories} / 300</output>
       </div>
     </div>
   );

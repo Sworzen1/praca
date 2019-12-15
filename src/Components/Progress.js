@@ -1,6 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import { useCalories } from "../Calories";
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -37,12 +38,8 @@ marginTop:"100px"
 
 const Progress = () => {
   const classes = useStyles();
+  const { carbo, protein, fat } = useCalories()
 
-  const [count, setCounter ] = useState(0);
-
-  const Add = () =>  {
-    setCounter(count  +1);
-  } 
 
   return (
     <div className={classes.ProgressBars}>
@@ -56,7 +53,7 @@ const Progress = () => {
             value={70}
             
           />
-          <output> {count} / 300</output>
+          <output> {carbo} / 300</output>
        
         </div>
       </div>
@@ -70,7 +67,7 @@ const Progress = () => {
             color="secondary"
             value={50}
           />
-           <output> {count} / 300</output>
+           <output> {protein} / 300</output>
         </div>
       </div>
 
@@ -83,7 +80,7 @@ const Progress = () => {
             color="secondary"
             value={20}
           />
-           <output> {count} / 300</output>
+           <output> {fat} / 300</output>
         </div>
       </div>
     </div>

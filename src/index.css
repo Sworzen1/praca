@@ -29,7 +29,7 @@ code {
   margin: 300px auto;
   position: relative;
   text-align: center;
-  color: red;
+  color: #f50057;
   transition: 0.24s 0.2s;
 }
 .navbar1 .menu1 {
@@ -73,7 +73,7 @@ code {
   border-radius: 50%;
   background-color: white;
   position: absolute;
-  color: red;
+  color: #f50057;
   transition: 0.7s;
   text-decoration: none;
 }

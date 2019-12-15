@@ -20,7 +20,7 @@ box1: {
     
   },
   h3:{
-    borderBottom:'1px solid red',
+    borderBottom:'1px solid #f50057',
   },
   h4:{
     lineHeight:'2px',

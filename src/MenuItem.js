@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     color:"white",
     fontSize:20,
     '&:hover':{
-      borderRight:"5px solid red",
+      borderRight:"5px solid #f50057",
     }
   },
 
@@ -36,7 +36,7 @@ const MenuItem = (props) => {
         className={classes.link}
         activeStyle={{
           background: "#17161a",
-          borderRight:"5px solid red",
+          borderRight:"5px solid #f50057",
           }}
       >
         {props.title} 

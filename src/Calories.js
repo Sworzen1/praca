@@ -11,6 +11,7 @@ const CaloriesProvider = (props) => {
     const [fat, setFat] = useState(0)
     const [calories, setCalories] = useState(0)
     const [isLoggedIn, setIsLoggedIn] = useState(false)
+    const [havent, setRegister] = useState(false)
     // useEffect(() => {
     //     const caloriesFromMemory = localStorage.getItem('calories')
     //     setCalories(parseInt(caloriesFromMemory))
@@ -38,8 +39,11 @@ const CaloriesProvider = (props) => {
     const login = () => {
         setIsLoggedIn(true)
     }
+    const register = ()  => {
+        setRegister(true)
+    }
 
-    return <Provider value={{ protein, addCalories, login, isLoggedIn, carbo, fat, calories}}>
+    return <Provider value={{ protein, addCalories, login, isLoggedIn, carbo, fat, calories, register, havent}}>
         {props.children}
     </Provider>
 }

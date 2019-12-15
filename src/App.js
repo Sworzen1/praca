@@ -11,14 +11,23 @@ import Snack from "./Meals/Snack";
 import Supper from "./Meals/Supper";
 import { useCalories } from "./Calories";
 import SingIn from "./SingIn";
+import SingUp from "./SingUp"
 
 
 const App = () => {
-  const { isLoggedIn } = useCalories()
+  const { isLoggedIn, havent } = useCalories()
+
+
 
   if (!isLoggedIn) {
     return <SingIn/>
   } 
+  if (!havent) {
+    return <SingUp/>
+}
+
+
+
 
   return (
     <Router>

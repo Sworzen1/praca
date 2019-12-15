@@ -9,9 +9,17 @@ import Lunch from "./Meals/Lunch";
 import Dinner from "./Meals/Dinner";
 import Snack from "./Meals/Snack";
 import Supper from "./Meals/Supper";
+import { useCalories } from "./Calories";
+import SingIn from "./SingIn";
 
 
 const App = () => {
+  const { isLoggedIn } = useCalories()
+
+  if (!isLoggedIn) {
+    return <SingIn/>
+  } 
+
   return (
     <Router>
       <div className={"app"}>

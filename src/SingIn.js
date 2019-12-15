@@ -1,6 +1,7 @@
 import React from "react";
 import { useCalories } from "./Calories";
 import { makeStyles } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
 main:{
@@ -12,11 +13,15 @@ main:{
     alignItems:'center',
     justifyContent:'center',
 },
+formfield:{
+    marginBottom:"40px",
+},
 container:{
     backgroundColor:"rgba(15,15,15,.8)",
     width:"30%",
     height:"50%",
-    boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)"
+    boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
+    padding:"30px",
 },
 label: {
     display:"block",
@@ -30,12 +35,24 @@ label: {
     border:"none",
     color: "white",
     outline: "none",
-    borderBottom: "1px solid red",
+    borderBottom: "1px solid #f50057",
     fontSize: "1em",
     fontWeight: "300",
     paddingBottom: "10px",
     marginTop: "10px",
+  },
+  link:{
+    color: "#66707D",
+    textDecoration: "none",
+    display: "inline-block",
+    borderBottom: "1.5px solid #f50057",
+    paddingBottom: "5px",
+    marginLeft:"30px"
+  },
+  title:{
+      marginBottom:"50px",
   }
+
 
 
 }));
@@ -46,6 +63,9 @@ const SingIn = () => {
   return (
     <div className={classes.main}>
       <div className={classes.container}>
+
+<h2 className={classes.title}>SingIn</h2>
+        
         <div className={classes.formfield}>
           <label className={classes.label} htmlFor="email">
             E-Mail Adress
@@ -73,8 +93,11 @@ const SingIn = () => {
         </div>
 
         <div>
-          <button onClick={login}>Login</button>
-          <div>Create your account</div>
+        <Button size="large" color="secondary" onClick={login} className={classes.button}>
+            Login
+          </Button> 
+          
+          <div className={classes.link}>Create your account</div>
         </div>
       </div>
     </div>

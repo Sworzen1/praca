@@ -4,7 +4,11 @@
         "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
         "titleRecipe":"Cos tu",
         "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 1
+        "id": 1,
+        "carbo": 100,
+        "protein": 100,
+        "fat":100,
+        "calories":100
     },
     {
         "title":"Gowno",

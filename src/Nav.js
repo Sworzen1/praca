@@ -25,7 +25,15 @@ const classes= useStyles();
     {
       title: "Contact",
       to: "/Contact"
-    }
+    },
+    {
+      title:"Settings",
+    to:"/Settings"
+  },
+    {
+      title:"Form",
+    to:"/Form"
+  }
   ];
 
   return (

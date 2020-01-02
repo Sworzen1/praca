@@ -5,6 +5,8 @@ import Specyfies from "./Components/Specyfies";
 import Name from "./Components/Name";
 import BMI from "./Components/BMI";
 import {makeStyles} from "@material-ui/core/styles";
+import {useCalories} from "./Calories"
+import Button from "@material-ui/core/Button"
 
 const useStyles = makeStyles({
   data: {
@@ -13,6 +15,11 @@ top:200,
 left:375,
 color:"white"
   },
+  button:{
+    position:"absolute",
+    top:30,
+    right:30
+  }
 
 });
 
@@ -20,6 +27,7 @@ color:"white"
 const Profile = () => {
 
 const classes = useStyles();
+const {Already} = useCalories()
 
   return (
     <div className="container">
@@ -27,6 +35,14 @@ const classes = useStyles();
       <Specyfies />
       <Calories />
       <Progress />
+      <Button
+            size="large"
+            color="secondary"
+            onClick={Already}
+            className={classes.button}
+          >
+            LogOut
+          </Button>
       <div>
         <h1 className={classes.data}>{new Date().toLocaleDateString()}</h1>
       </div>

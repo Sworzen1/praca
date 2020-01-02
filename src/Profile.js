@@ -7,6 +7,7 @@ import BMI from "./Components/BMI";
 import {makeStyles} from "@material-ui/core/styles";
 import {useCalories} from "./Calories"
 import Button from "@material-ui/core/Button"
+import {Text} from "./Lang/Language"
 
 const useStyles = makeStyles({
   data: {
@@ -41,7 +42,7 @@ const {Already} = useCalories()
             onClick={Already}
             className={classes.button}
           >
-            LogOut
+            <Text tid="logout">logout</Text>
           </Button>
       <div>
         <h1 className={classes.data}>{new Date().toLocaleDateString()}</h1>

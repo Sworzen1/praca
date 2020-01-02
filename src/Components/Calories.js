@@ -2,6 +2,7 @@ import React from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { useCalories } from "../Calories";
+import {Text} from "../Lang/Language"
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -38,7 +39,7 @@ const Calories = () => {
   return (
     <div className={classes.main}>
       <div className={classes.root}>
-        <h1 className={classes.h3}>Calories</h1>
+       <h1 className={classes.h3}><Text tid="calories">Calories </Text></h1>
         <BorderLinearProgress
           className={classes.margin}
           variant="determinate"

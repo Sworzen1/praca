@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import {Text} from "../Lang/Language"
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -35,7 +36,7 @@ const Name = () => {
   return (
     <div className={classes.main}>
       <div className={classes.text}>
-        <span className={classes.h1}>Name</span>
+        <span className={classes.h1}><Text tid="name">Name</Text></span>
         <span className={classes.h2}>
           <h2>Weronika</h2>
         </span>

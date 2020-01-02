@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
+import {Text} from "../Lang/Language";
 
 const useStyles = makeStyles(theme => ({
 text :{
@@ -38,8 +39,8 @@ const BMI = () => {
         <div className={classes.text}>
         <span className={classes.h1}>
             <h2 className={classes.h2}>35</h2>
-          <h3>Your BMI</h3>
-          <h4 className={classes.line}>Overweight</h4>
+          <h3><Text tid="bmi">Your BMI</Text></h3>
+          <h4 className={classes.line}><Text tid="overweight">Overweight</Text></h4>
           </span>
         
       </div>

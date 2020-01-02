@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import MenuItem from "./MenuItem";
 import {makeStyles} from "@material-ui/core/styles"
+import {LanguageContext} from "./Lang/Language"
 
 const useStyles = makeStyles (theme => ({
 
@@ -12,26 +13,27 @@ const useStyles = makeStyles (theme => ({
 
 const Nav = () => {
 const classes= useStyles();
+const z = useContext(LanguageContext);
 
   const menu = [
     {
-      title: "Profile",
+      title: z.dictionary.profile,
       to: "/"
     },
     {
-      title: "Foods",
+      title: z.dictionary.foods,
       to: "/Foods"
     },
     {
-      title: "Contact",
+      title: z.dictionary.contact,
       to: "/Contact"
     },
     {
-      title:"Settings",
+      title:z.dictionary.settings,
     to:"/Settings"
   },
     {
-      title:"Form",
+      title:z.dictionary.form,
     to:"/Form"
   }
   ];

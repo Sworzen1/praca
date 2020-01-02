@@ -2,6 +2,8 @@ import React from "react";
 import { lighten, makeStyles, withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { useCalories } from "../Calories";
+import {Text} from "../Lang/Language";
+
 
 const BorderLinearProgress = withStyles({
   root: {
@@ -44,7 +46,7 @@ const Progress = () => {
   return (
     <div className={classes.ProgressBars}>
       <div className={classes.all}>
-        <h4 className={classes.h4}>Carbohydrates</h4>
+        <h4 className={classes.h4}><Text tid="carbohydrates">Carbohydrates</Text></h4>
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}
@@ -59,7 +61,7 @@ const Progress = () => {
       </div>
 
       <div className={classes.all}>
-        <h4 className={classes.h4}>Proteins</h4>
+        <h4 className={classes.h4}><Text tid="proteins">Proteins</Text></h4>
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}
@@ -72,7 +74,7 @@ const Progress = () => {
       </div>
 
       <div className={classes.all}>
-        <h4 className={classes.h4}>Fats</h4>
+        <h4 className={classes.h4}><Text tid="fats">Fats</Text></h4>
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}

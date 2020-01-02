@@ -14,6 +14,7 @@ import SingIn from "./SingIn";
 import SingUp from "./SingUp";
 import Settings from "./Settings";
 import Form from "./Form";
+import { LanguageProvider } from "./Lang/Language";
 
 const App = () => {
   const { login } = useCalories();
@@ -25,6 +26,7 @@ const App = () => {
   }
 
   return (
+    <LanguageProvider>
     <Router>
       <div className={"app"}>
         <Drawer />
@@ -64,6 +66,7 @@ const App = () => {
         </main>
       </div>
     </Router>
+    </LanguageProvider>
   );
 };
 export default App;

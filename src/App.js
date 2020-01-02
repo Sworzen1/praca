@@ -11,23 +11,18 @@ import Snack from "./Meals/Snack";
 import Supper from "./Meals/Supper";
 import { useCalories } from "./Calories";
 import SingIn from "./SingIn";
-import SingUp from "./SingUp"
-
+import SingUp from "./SingUp";
+import Settings from "./Settings";
+import Form from "./Form";
 
 const App = () => {
-  const { isLoggedIn, havent } = useCalories()
+  const { login } = useCalories();
 
-
-
-  if (!isLoggedIn) {
-    return <SingIn/>
-  } 
-  if (!havent) {
-    return <SingUp/>
-}
-
-
-
+  if (login == 0) {
+    return <SingIn />;
+  } else if (login == 1) {
+    return <SingUp />;
+  }
 
   return (
     <Router>
@@ -35,7 +30,13 @@ const App = () => {
         <Drawer />
         <main className={"main"}>
           <Switch>
-          <Route path="/supper">
+          <Route path="/Form">
+              <Form />
+            </Route>
+            <Route path="/Settings">
+              <Settings />
+            </Route>
+            <Route path="/supper">
               <Supper />
             </Route>
             <Route path="/snack">
@@ -47,7 +48,7 @@ const App = () => {
             <Route path="/lunch">
               <Lunch />
             </Route>
-          <Route path="/breakfast">
+            <Route path="/breakfast">
               <Breakfast />
             </Route>
             <Route path="/Foods">
@@ -59,7 +60,6 @@ const App = () => {
             <Route path="/">
               <Profile />
             </Route>
-
           </Switch>
         </main>
       </div>

@@ -17,7 +17,7 @@ import Form from "./Form";
 import { LanguageProvider } from "./Lang/Language";
 
 const App = () => {
-  const { login } = useCalories();
+  const { login, darkmode } = useCalories();
 
   if (login == 0) {
     return <SingIn />;
@@ -30,7 +30,7 @@ const App = () => {
     <Router>
       <div className={"app"}>
         <Drawer />
-        <main className={"main"}>
+        <main className={darkmode ? "main" : "mainLight"}>
           <Switch>
           <Route path="/Form">
               <Form />

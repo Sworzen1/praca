@@ -2,6 +2,11 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import LanguageSelector from "./Lang/LanguageSelector";
 import {Text} from "./Lang/Language";
+import Button from '@material-ui/core/Button';
+import {useCalories} from "./Calories";
+
+
+
 
 const useStyles = makeStyles (theme => ({
     box1: {
@@ -21,21 +26,29 @@ const useStyles = makeStyles (theme => ({
          color:"white"
          
        },
+       boxL:{
+        backgroundColor: "rgba(150,150,150,.8)",
+        boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
+        width:'30%',
+        height:'60%',
+        padding:'30px',
+        color:"black"
+       }
 
 }))
 
 const Settings = () => {
-
+  const { darkmode, Dark} = useCalories();
  const classes = useStyles();
- const [age, setAge] = React.useState('');
-  const handleChange = event => {
-    setAge(event.target.value);
-  }
+
+
     return (
 <div className={classes.box1}>
-    <div className={classes.box2}>
+    <div className={ darkmode ? classes.box2 : classes.boxL}>
      <Text tid="language"> Language</Text>:
-<LanguageSelector />
+<LanguageSelector /><br/>
+
+<Button onClick={Dark}>Change</Button>
     </div>
     </div>
     )

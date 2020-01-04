@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Text} from "../Lang/Language"
+import {Text} from "../Lang/Language";
+import {useCalories} from "../Calories";
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -10,6 +11,13 @@ const useStyles = makeStyles(theme => ({
     left: 340,
     color:"white"
   },
+  mainL: {
+    position: "absolute",
+    width: "200px",
+    paddingTop: "10px",
+    left: 340,
+    color:"black"
+  },
   text: {
     border: "2px solid black ",
     width: "200px",
@@ -17,6 +25,7 @@ const useStyles = makeStyles(theme => ({
     margin: "10px",
     borderRadius: 10
   },
+
   h1: {
     position: "absolute",
     background: "transparent",
@@ -27,16 +36,27 @@ const useStyles = makeStyles(theme => ({
     zIndex: 1,
     textAlign: "center"
   },
+  h1L: {
+    position: "absolute",
+    background: "transparent",
+    marginTop: "-11px",
+    marginLeft: "10px",
+    width: "50px",
+    background: "white",
+    zIndex: 1,
+    textAlign: "center"
+  },
   h2: {
     textAlign: "center"
   }
 }));
 const Name = () => {
+  const {darkmode} = useCalories();
   const classes = useStyles();
   return (
-    <div className={classes.main}>
-      <div className={classes.text}>
-        <span className={classes.h1}><Text tid="name">Name</Text></span>
+    <div className={darkmode ? classes.main : classes.mainL}>
+      <div className={ classes.text}>
+        <span className={darkmode ? classes.h1 : classes.h1L}><Text tid="name">Name</Text></span>
         <span className={classes.h2}>
           <h2>Weronika</h2>
         </span>

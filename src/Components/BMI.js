@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {Text} from "../Lang/Language";
+import {useCalories} from "../Calories";
 
 const useStyles = makeStyles(theme => ({
 text :{
@@ -16,6 +17,19 @@ top:400,
 left:400,
 color:"white",
 },
+textL :{
+    width:"100px",
+    height:"120px",
+    display:'flex',
+    alignItems:'center',
+    justifyContent:'center',
+    border:"2px solid black",
+    borderRadius:10,
+    position:"absolute",
+    top:400,
+    left:400,
+    color:"black",
+    },
 h1:{
 
 textAlign:'center',
@@ -34,9 +48,10 @@ line:{
 
 
 const BMI = () => {
+    const {darkmode} = useCalories();
     const classes = useStyles();
     return (
-        <div className={classes.text}>
+        <div className={darkmode ? classes.text : classes.textL}>
         <span className={classes.h1}>
             <h2 className={classes.h2}>35</h2>
           <h3><Text tid="bmi">Your BMI</Text></h3>

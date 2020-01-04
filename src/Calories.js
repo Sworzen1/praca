@@ -10,6 +10,7 @@ const CaloriesProvider = props => {
   const [protein, setProtein] = useState(0);
   const [fat, setFat] = useState(0);
   const [calories, setCalories] = useState(0);
+  const [darkmode, setDark] = useState(true);
 
   // useEffect(() => {
   //     const caloriesFromMemory = localStorage.getItem('calories')
@@ -34,6 +35,9 @@ const CaloriesProvider = props => {
     setCalories(calories + caloriesToAdd);
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
+  const Dark = () => {
+setDark(!darkmode);
+  };
 
   const LoggedIn = () => {
     setLogin(2);
@@ -56,7 +60,9 @@ const CaloriesProvider = props => {
         fat,
         calories,
         login,
-        LoggedIn
+        LoggedIn,
+        darkmode,
+        Dark
       }}
     >
       {props.children}

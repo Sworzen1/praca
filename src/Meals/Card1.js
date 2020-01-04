@@ -134,9 +134,6 @@ const Card1 = props => {
           <Typography gutterBottom>{props.descRecipe}</Typography>
         </DialogContent>
         <DialogActions>
-          <Button size="small" color="primary">
-            Dodaj
-          </Button>
         </DialogActions>
       </Dialog>
     </div>

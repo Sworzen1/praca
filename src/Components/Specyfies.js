@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {Text} from "../Lang/Language";
+import {useCalories} from "../Calories"
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -40,6 +41,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Specyfies = () => {
+  const {age, weight, height} = useCalories();
   const classes = useStyles();
 
   return (
@@ -47,21 +49,21 @@ const Specyfies = () => {
       <div className={classes.text}>
        <span className={classes.h1}> <Text tid="age">Age</Text></span>
         <span className={classes.h2}>
-          <h2>23</h2>
+          <h2>{age}</h2>
         </span>
       </div>
 
       <div className={classes.text1}>
         <span className={classes.h1}><Text tid="weight">Weight</Text></span>
         <span className={classes.h2}>
-          <h1>67</h1>
+          <h1>{weight}</h1>
         </span>
       </div>
 
       <div className={classes.text}>
         <span className={classes.h1}><Text tid="height">Height</Text></span>
         <span className={classes.h2}>
-          <h2>182</h2>
+          <h2>{height}</h2>
         </span>
       </div>
       

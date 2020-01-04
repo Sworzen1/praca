@@ -51,14 +51,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 const Name = () => {
-  const {darkmode} = useCalories();
+  const {darkmode, name} = useCalories();
   const classes = useStyles();
   return (
     <div className={darkmode ? classes.main : classes.mainL}>
       <div className={ classes.text}>
         <span className={darkmode ? classes.h1 : classes.h1L}><Text tid="name">Name</Text></span>
         <span className={classes.h2}>
-          <h2>Weronika</h2>
+          <h2>{name}</h2>
         </span>
       </div>
     </div>

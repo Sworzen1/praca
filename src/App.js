@@ -12,7 +12,6 @@ import Supper from "./Meals/Supper";
 import { useCalories } from "./Calories";
 import SingIn from "./SingIn";
 import SingUp from "./SingUp";
-import Settings from "./Settings";
 import Form from "./Form";
 import { LanguageProvider } from "./Lang/Language";
 
@@ -34,9 +33,6 @@ const App = () => {
           <Switch>
           <Route path="/Form">
               <Form />
-            </Route>
-            <Route path="/Settings">
-              <Settings />
             </Route>
             <Route path="/supper">
               <Supper />

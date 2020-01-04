@@ -29,10 +29,6 @@ const z = useContext(LanguageContext);
       to: "/Contact"
     },
     {
-      title:z.dictionary.settings,
-    to:"/Settings"
-  },
-    {
       title:z.dictionary.form,
     to:"/Form"
   }

@@ -21,8 +21,8 @@ const english = {
     dinner:"Dinner",
     snack:"Snack",
     supper:"Supper",
-    number:"Number",
-    address:"Address",
+    number:"Number:",
+    address:"Address:",
     language:"Language"
 
   };

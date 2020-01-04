@@ -21,8 +21,8 @@ const polish = {
     dinner:"Obiad",
     snack:"Przekąska",
     supper:"Kolacja",
-    number:"Numer",
-    address:"Adres",
+    number:"Numer:",
+    address:"Adres:",
     language:"Język",
   };
   

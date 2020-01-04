@@ -7,7 +7,8 @@ import BMI from "./Components/BMI";
 import {makeStyles} from "@material-ui/core/styles";
 import {useCalories} from "./Calories"
 import Button from "@material-ui/core/Button"
-import {Text} from "./Lang/Language"
+import {Text} from "./Lang/Language";
+import LanguageSelector from "./Lang/LanguageSelector";
 
 const useStyles = makeStyles({
   data: {
@@ -32,13 +33,14 @@ color:"white"
     top:30,
     right:30,
   },
+
 });
 
 
 const Profile = () => {
 
 const classes = useStyles();
-const {Already, darkmode} = useCalories()
+const {Already, darkmode, Dark} = useCalories()
 
   return (
     <div className="container">
@@ -46,6 +48,8 @@ const {Already, darkmode} = useCalories()
       <Specyfies />
       <Calories />
       <Progress />
+      <Button onClick={Dark}>Change</Button>
+      <LanguageSelector />
       <Button
             size="large"
             color="secondary"

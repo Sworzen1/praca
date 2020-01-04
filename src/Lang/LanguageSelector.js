@@ -14,8 +14,11 @@ fontWeight: "bold",
 width:"120px",
 height:"45px",
 borderRadius: 0,
-backgroundColor:"rgba(15,15,15,.5)",
+backgroundColor:"rgba(15,15,15,.4)",
 marginLeft:"30px",
+position:"absolute",
+top:25,
+right:150
   },
 
 

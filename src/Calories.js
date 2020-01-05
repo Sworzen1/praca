@@ -9,6 +9,7 @@ const CaloriesProvider = props => {
   const initialWeight = localStorage.getItem("weight");
   const initialHeight = localStorage.getItem("height");
   const initialLogin = localStorage.getItem("login");
+  const initialBMI = localStorage.getItem("BMI");
 
   const [login, setLogin] = useState(initialLogin);
   const [carbo, setCarbo] = useState(0);
@@ -20,6 +21,7 @@ const CaloriesProvider = props => {
   const [age, setAge] = useState(initialAge);
   const [weight, setWeight] = useState(initialWeight);
   const [height, setHeight] = useState(initialHeight);
+  const [bmi, setBmi] = useState(initialBMI);
 
 
   const addName = titleName => {
@@ -36,6 +38,10 @@ const CaloriesProvider = props => {
   const addHeight = titleHeight => {
     setHeight(titleHeight);
   };
+
+  useEffect(() => {
+    localStorage.setItem("BMI", bmi);
+  }, [bmi]);
 
   useEffect(() => {
     localStorage.setItem("login", login);
@@ -85,6 +91,12 @@ const CaloriesProvider = props => {
     setCalories(calories + caloriesToAdd);
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
+
+
+const calcBMI = () => {
+    setBmi(weight/((height*height)/10000));
+};
+
   const Dark = () => {
     setDark(!darkmode);
   };
@@ -120,7 +132,9 @@ const CaloriesProvider = props => {
         addHeight,
         height,
         addWeight,
-        weight
+        weight,
+        bmi,
+        calcBMI
       }}
     >
       {props.children}

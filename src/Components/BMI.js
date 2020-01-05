@@ -48,12 +48,13 @@ line:{
 
 
 const BMI = () => {
-    const {darkmode} = useCalories();
+    
+    const {darkmode, bmi} = useCalories();
     const classes = useStyles();
     return (
         <div className={darkmode ? classes.text : classes.textL}>
         <span className={classes.h1}>
-            <h2 className={classes.h2}>35</h2>
+            <h2 className={classes.h2}>{parseInt(bmi)}</h2>
           <h3><Text tid="bmi">Your BMI</Text></h3>
           <h4 className={classes.line}><Text tid="overweight">Overweight</Text></h4>
           </span>

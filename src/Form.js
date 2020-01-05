@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Form = () => {
-  const { addName, addAge, addWeight, addHeight } = useCalories();
+  const { addName, addAge, addWeight, addHeight, calcBMI } = useCalories();
   const [titleName, setTitle] = useState("")
   const [titleAge,setAge] = useState("");
   const [titleWeight,setWeight] = useState("");
@@ -154,7 +154,7 @@ const Form = () => {
             ></input>
           </div>
 
-          <Button size="large" color="secondary" type="submit">
+          <Button size="large" color="secondary" type="submit" onClick={calcBMI}>
             Submit
           </Button>
         </form>

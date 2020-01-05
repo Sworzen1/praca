@@ -55,7 +55,7 @@ const Progress = () => {
             value={70}
             
           />
-          <output> {carbo} / {parseInt(car)}</output>
+          <output> {carbo} / {parseInt(car)} </output>
        
         </div>
       </div>
@@ -82,7 +82,7 @@ const Progress = () => {
             color="secondary"
             value={20}
           />
-           <output> {fat} / {parseInt(fats)}</output>
+           <output> {fat} / {parseInt(fats)} </output>
         </div>
       </div>
     </div>

@@ -38,6 +38,7 @@ const CaloriesProvider = props => {
   const addAge = titleAge => {
     setAge(titleAge);
   };
+
   const addWeight = titleWeight => {
     setWeight(titleWeight);
   };
@@ -45,12 +46,15 @@ const CaloriesProvider = props => {
   const addHeight = titleHeight => {
     setHeight(titleHeight);
   };
+
   useEffect(() => {
     localStorage.setItem("CAR", car);
   }, [car]);
+
   useEffect(() => {
     localStorage.setItem("PRO", pro);
   }, [pro]);
+
   useEffect(() => {
     localStorage.setItem("FATS", fats);
   }, [fats]);
@@ -74,30 +78,35 @@ const CaloriesProvider = props => {
   useEffect(() => {
     localStorage.setItem("name", name);
   }, [name]);
+
   useEffect(() => {
     localStorage.setItem("weight", weight);
   }, [weight]);
+
   useEffect(() => {
     localStorage.setItem("height", height);
   }, [height]);
 
   useEffect(() => {
     const carboFromMemory = localStorage.getItem("carbo");
-    setCarbo(parseInt(carboFromMemory));
-  }, []);
-  useEffect(() => {
-    const proteinFromMemory = localStorage.getItem("protein");
-    setProtein(parseInt(proteinFromMemory));
-  }, []);
-  useEffect(() => {
-    const fatFromMemory = localStorage.getItem("fat");
-    setFat(parseInt(fatFromMemory));
-  }, []);
-  useEffect(() => {
-    const caloriesFromMemory = localStorage.getItem("calories");
-    setCalories(parseInt(caloriesFromMemory));
+    setCarbo((carboFromMemory));
   }, []);
 
+  useEffect(() => {
+    const proteinFromMemory = localStorage.getItem("protein");
+    setProtein((proteinFromMemory));
+  }, []);
+
+  useEffect(() => {
+    const fatFromMemory = localStorage.getItem("fat");
+    setFat((fatFromMemory));
+  }, []);
+
+  useEffect(() => {
+    const caloriesFromMemory = localStorage.getItem("calories");
+    setCalories((caloriesFromMemory));
+  }, []);
+  
   const addCalories = (carboToAdd, proteinToAdd, fatToAdd, caloriesToAdd) => {
     setCarbo(carbo + carboToAdd);
     localStorage.setItem("carbo", carbo + carboToAdd);
@@ -112,13 +121,15 @@ const CaloriesProvider = props => {
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
 
-  const calcBMI = () => {
-    setBmi(weight / ((height * height) / 10000));
-    setCal(370 + (13.7 * weight) + (5 * height) - (6.76 * age));
-    setCar((cal * 0.5) / 4);
-    setPro((cal * 0.3) / 4);
-    setFats((cal * 0.2) / 9);
-  };
+
+const calcBMI = () => {
+    setBmi(weight/((height*height)/10000));
+    setCal (370 + (13.7*weight) + (5*height) - (6.76*age));
+    setCar ((cal*0.5)/4);
+    setPro ((cal*0.3)/4);
+    setFats ((cal*0.2)/9)
+};
+
 
   const Dark = () => {
     setDark(!darkmode);
@@ -127,9 +138,11 @@ const CaloriesProvider = props => {
   const LoggedIn = () => {
     setLogin(2);
   };
+
   const Register = () => {
     setLogin(1);
   };
+  
   const Already = () => {
     setLogin(0);
   };
@@ -159,9 +172,10 @@ const CaloriesProvider = props => {
         bmi,
         calcBMI,
         cal,
+        car,
         pro,
-        fats,
-        car
+        fats
+
       }}
     >
       {props.children}

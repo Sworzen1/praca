@@ -113,7 +113,8 @@ const Card1 = props => {
         </CardContent>
 
         <CardActions>
-          <Button size="small" color="secondary"  onClick={() => addCalories( props.carbo, props.protein, props.fat, props.calories)}>
+          <Button size="small" color="secondary"
+            onClick={() => addCalories( props.carbo, props.protein, props.fat, props.calories)}>
             Dodaj
           </Button>
           <Button size="small" color="secondary" onClick={handleClickOpen}>

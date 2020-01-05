@@ -54,7 +54,7 @@ const Calories = () => {
           value={30}
           
         />
-         <output> {calories} / {parseInt(cal)}</output>
+         <output> {calories} / {parseInt(cal)} </output>
       </div>
     </div>
   );

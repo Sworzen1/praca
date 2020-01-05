@@ -10,6 +10,10 @@ const CaloriesProvider = props => {
   const initialHeight = localStorage.getItem("height");
   const initialLogin = localStorage.getItem("login");
   const initialBMI = localStorage.getItem("BMI");
+  const initialCal = localStorage.getItem("CAL");
+  const initialCar = localStorage.getItem("CAR");
+  const initialPro = localStorage.getItem("PRO");
+  const initialFats = localStorage.getItem("FATS");
 
   const [login, setLogin] = useState(initialLogin);
   const [carbo, setCarbo] = useState(0);
@@ -22,7 +26,10 @@ const CaloriesProvider = props => {
   const [weight, setWeight] = useState(initialWeight);
   const [height, setHeight] = useState(initialHeight);
   const [bmi, setBmi] = useState(initialBMI);
-
+  const [cal, setCal] = useState(initialCal);
+  const [car, setCar] = useState(initialCar);
+  const [pro, setPro] = useState(initialPro);
+  const [fats, setFats] = useState(initialFats);
 
   const addName = titleName => {
     setName(titleName);
@@ -38,6 +45,19 @@ const CaloriesProvider = props => {
   const addHeight = titleHeight => {
     setHeight(titleHeight);
   };
+  useEffect(() => {
+    localStorage.setItem("CAR", car);
+  }, [car]);
+  useEffect(() => {
+    localStorage.setItem("PRO", pro);
+  }, [pro]);
+  useEffect(() => {
+    localStorage.setItem("FATS", fats);
+  }, [fats]);
+
+  useEffect(() => {
+    localStorage.setItem("CAL", cal);
+  }, [cal]);
 
   useEffect(() => {
     localStorage.setItem("BMI", bmi);
@@ -77,7 +97,7 @@ const CaloriesProvider = props => {
     const caloriesFromMemory = localStorage.getItem("calories");
     setCalories(parseInt(caloriesFromMemory));
   }, []);
-  
+
   const addCalories = (carboToAdd, proteinToAdd, fatToAdd, caloriesToAdd) => {
     setCarbo(carbo + carboToAdd);
     localStorage.setItem("carbo", carbo + carboToAdd);
@@ -92,10 +112,13 @@ const CaloriesProvider = props => {
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
 
-
-const calcBMI = () => {
-    setBmi(weight/((height*height)/10000));
-};
+  const calcBMI = () => {
+    setBmi(weight / ((height * height) / 10000));
+    setCal(370 + (13.7 * weight) + (5 * height) - (6.76 * age));
+    setCar((cal * 0.5) / 4);
+    setPro((cal * 0.3) / 4);
+    setFats((cal * 0.2) / 9);
+  };
 
   const Dark = () => {
     setDark(!darkmode);
@@ -134,7 +157,11 @@ const calcBMI = () => {
         addWeight,
         weight,
         bmi,
-        calcBMI
+        calcBMI,
+        cal,
+        pro,
+        fats,
+        car
       }}
     >
       {props.children}

@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 const Calories = () => {
   const classes = useStyles();
   
-  const { calories, darkmode } = useCalories()
+  const { calories, darkmode, cal } = useCalories()
 
   return (
     <div className={darkmode ? classes.main : classes.mainL}>
@@ -54,7 +54,7 @@ const Calories = () => {
           value={30}
           
         />
-         <output> {calories} / 300</output>
+         <output> {calories} / {parseInt(cal)}</output>
       </div>
     </div>
   );

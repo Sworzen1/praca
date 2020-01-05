@@ -40,7 +40,7 @@ marginTop:"100px"
 
 const Progress = () => {
   const classes = useStyles();
-  const { carbo, protein, fat } = useCalories()
+  const { carbo, protein, fat, car, pro, fats } = useCalories()
 
 
   return (
@@ -55,7 +55,7 @@ const Progress = () => {
             value={70}
             
           />
-          <output> {carbo} / 300</output>
+          <output> {carbo} / {parseInt(car)}</output>
        
         </div>
       </div>
@@ -69,7 +69,7 @@ const Progress = () => {
             color="secondary"
             value={50}
           />
-           <output> {protein} / 300</output>
+           <output> {protein} / {parseInt(pro)}</output>
         </div>
       </div>
 
@@ -82,7 +82,7 @@ const Progress = () => {
             color="secondary"
             value={20}
           />
-           <output> {fat} / 300</output>
+           <output> {fat} / {parseInt(fats)}</output>
         </div>
       </div>
     </div>

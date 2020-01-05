@@ -8,8 +8,9 @@ const CaloriesProvider = props => {
   const initialAge = localStorage.getItem("age");
   const initialWeight = localStorage.getItem("weight");
   const initialHeight = localStorage.getItem("height");
+  const initialLogin = localStorage.getItem("login");
 
-  const [login, setLogin] = useState(0);
+  const [login, setLogin] = useState(initialLogin);
   const [carbo, setCarbo] = useState(0);
   const [protein, setProtein] = useState(0);
   const [fat, setFat] = useState(0);
@@ -36,6 +37,9 @@ const CaloriesProvider = props => {
     setHeight(titleHeight);
   };
 
+  useEffect(() => {
+    localStorage.setItem("login", login);
+  }, [login]);
 
   useEffect(() => {
     localStorage.setItem("age", age);

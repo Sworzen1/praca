@@ -41,23 +41,23 @@ marginTop:"100px"
 const Progress = () => {
 
   const classes = useStyles();
-  const { carbo, protein, fat,height, weight, age, car,pro, fats} = useCalories()
-  
-
+  const { carbo, protein, fat, car,pro, fats, x, y, z} = useCalories()
 
   return (
+    
     <div className={classes.ProgressBars}>
       <div className={classes.all}>
         <h4 className={classes.h4}><Text tid="carbohydrates">Carbohydrates</Text></h4>
+        
         <div className={classes.root}>
           <BorderLinearProgress
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={0}
-            
+            value={x}
           />
           <output> {carbo} / {parseInt(car)} </output>
+          
        
         </div>
       </div>
@@ -69,7 +69,7 @@ const Progress = () => {
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={0}
+            value={y}
           />
            <output> {protein} / {parseInt(pro)}</output>
         </div>
@@ -82,7 +82,7 @@ const Progress = () => {
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={0}
+            value={z}
           />
            <output> {fat} / {parseInt(fats)} </output>
         </div>

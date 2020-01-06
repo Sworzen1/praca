@@ -24,6 +24,11 @@ const CaloriesProvider = props => {
   const pro = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.3) / 4;
   const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9;
   const cal = (370 + (13.7*weight) + (5*height) - (6.76*age));
+  const x = carbo * 100 / car;
+  const y = protein * 100 / pro;
+  const z = fat * 100 / fats;
+  const v = calories * 100 / cal;
+  
 
   const addName = titleName => {
     setName(titleName);
@@ -136,7 +141,11 @@ const CaloriesProvider = props => {
         car,
         pro,
         fats,
-        cal
+        cal,
+        x,
+        y,
+        z,
+        v
       }}
     >
       {props.children}

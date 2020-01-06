@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
 const Calories = () => {
   const classes = useStyles();
   
-  const { calories, darkmode, weight, height, age, cal} = useCalories()
+  const { calories, darkmode, cal, v} = useCalories()
 
   return (
     <div className={darkmode ? classes.main : classes.mainL}>
@@ -51,7 +51,7 @@ const Calories = () => {
           className={classes.margin}
           variant="determinate"
           color="secondary"
-          value={30}
+          value={v}
           
         />
          <output> {calories} / {parseInt(cal)} </output>

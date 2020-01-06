@@ -41,7 +41,8 @@ const useStyles = makeStyles(theme => ({
 const Calories = () => {
   const classes = useStyles();
   
-  const { calories, darkmode, cal } = useCalories()
+  const { calories, darkmode, weight, height, age} = useCalories()
+  const cal = (370 + (13.7*weight) + (5*height) - (6.76*age));
 
   return (
     <div className={darkmode ? classes.main : classes.mainL}>

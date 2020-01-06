@@ -40,7 +40,11 @@ marginTop:"100px"
 
 const Progress = () => {
   const classes = useStyles();
-  const { carbo, protein, fat, car, pro, fats } = useCalories()
+  const { carbo, protein, fat,height, weight, age } = useCalories()
+
+const car = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.5) / 4
+const pro = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.3) / 4
+const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9
 
 
   return (

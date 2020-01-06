@@ -125,8 +125,8 @@ const Form = () => {
               WEIGHT
             </label>
             <input
-                          onChange={handleChangeWeight}
-                          value={titleWeight}
+              onChange={handleChangeWeight}
+              value={titleWeight}
               type="number"
               min="1"
               max="500"
@@ -142,8 +142,8 @@ const Form = () => {
               HEIGHT
             </label>
             <input
-                          onChange={handleChangeHeight}
-                          value={titleHeight}
+              onChange={handleChangeHeight}
+              value={titleHeight}
               type="number"
               min="1"
               max="250"
@@ -154,7 +154,7 @@ const Form = () => {
             ></input>
           </div>
 
-          <Button size="large" color="secondary" type="submit" onClick={calcBMI}>
+          <Button size="large" color="secondary" type="submit">
             Submit
           </Button>
         </form>

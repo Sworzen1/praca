@@ -39,12 +39,10 @@ marginTop:"100px"
 }));
 
 const Progress = () => {
-  const classes = useStyles();
-  const { carbo, protein, fat,height, weight, age } = useCalories()
 
-const car = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.5) / 4
-const pro = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.3) / 4
-const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9
+  const classes = useStyles();
+  const { carbo, protein, fat,height, weight, age, car,pro, fats} = useCalories()
+  
 
 
   return (
@@ -56,7 +54,7 @@ const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={70}
+            value={0}
             
           />
           <output> {carbo} / {parseInt(car)} </output>
@@ -71,7 +69,7 @@ const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={50}
+            value={0}
           />
            <output> {protein} / {parseInt(pro)}</output>
         </div>
@@ -84,7 +82,7 @@ const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9
             className={classes.margin}
             variant="determinate"
             color="secondary"
-            value={20}
+            value={0}
           />
            <output> {fat} / {parseInt(fats)} </output>
         </div>

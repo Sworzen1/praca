@@ -77,6 +77,7 @@ const SingIn = () => {
             className={classes.input}
             placeholder="Enter your e-mail"
             name="email"
+            required
           ></input>
         </div>
 
@@ -90,11 +91,13 @@ const SingIn = () => {
             className={classes.input}
             placeholder="Enter your password"
             name="password"
+            required
           ></input>
         </div>
 
         <div>
           <Button
+          type="submit"
             size="large"
             color="secondary"
             onClick={LoggedIn}

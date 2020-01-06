@@ -20,6 +20,10 @@ const CaloriesProvider = props => {
   const [age, setAge] = useState(initialAge);
   const [weight, setWeight] = useState(initialWeight);
   const [height, setHeight] = useState(initialHeight);
+  const car = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.5) / 4;
+  const pro = ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.3) / 4;
+  const fats =  ((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9;
+  const cal = (370 + (13.7*weight) + (5*height) - (6.76*age));
 
   const addName = titleName => {
     setName(titleName);
@@ -91,10 +95,6 @@ const CaloriesProvider = props => {
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
 
-
-
-
-
   const Dark = () => {
     setDark(!darkmode);
   };
@@ -133,6 +133,10 @@ const CaloriesProvider = props => {
         height,
         addWeight,
         weight,
+        car,
+        pro,
+        fats,
+        cal
       }}
     >
       {props.children}

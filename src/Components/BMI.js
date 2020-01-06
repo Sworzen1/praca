@@ -36,16 +36,11 @@ textAlign:'center',
 lineHeight:'2px',
 },
 
-
-
-
-
 line:{
  borderBottom:'2px solid red',
  lineHeight:'20px',
 }
 }));
-
 
 const BMI = () => {
     

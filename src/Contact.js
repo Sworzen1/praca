@@ -15,8 +15,8 @@ box1: {
   box2: {
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
-    width:'300px',
-    height:'300px',
+    width:'20%',
+    height:'40%',
     padding:'30px',
     color:"white"
     

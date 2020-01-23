@@ -15,7 +15,6 @@ const english = {
     fats:"Fats",
     name:"Name",
     bmi:"Your BMI",
-    overweight:"Overweight",
     breakfast:"Breakfast",
     lunch:"Lunch",
     dinner:"Dinner",

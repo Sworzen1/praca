@@ -15,7 +15,6 @@ const polish = {
     fats:"Tłuszcze",
     name:"Imię",
     bmi:"Twoje BMI",
-    overweight:"Nadwaga",
     breakfast:"Śniadanie",
     lunch:"II Śniadanie",
     dinner:"Obiad",

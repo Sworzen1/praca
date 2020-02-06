@@ -22,27 +22,11 @@ const useStyles = makeStyles(theme => ({
       borderRight:"5px solid #f50057",
     }
   },
-  linkL: {
-    textDecoration: "none",
-    padding: 20,
- listStyle: "none",
- background: "#F5F5F5",
- marginTop: 20,
- display: "flex",
- alignItems: "center",
- justifyContent: "center",
- height:"70px",
- color:"black",
- fontSize:20,
- '&:hover':{
-   borderRight:"5px solid #0000FF",
- }
-  }
+  
 
 }));
 
 const MenuItem = (props) => {
-  const {darkmode} = useCalories();
   const classes = useStyles();
 
   return (
@@ -50,7 +34,7 @@ const MenuItem = (props) => {
       <NavLink className={classes.li}
         to={props.pathname}
         exact
-        className={darkmode ? classes.link : classes.linkL}
+        className={classes.link}
         activeStyle={{
           background: "#17161a",
           borderRight:"5px solid #f50057",

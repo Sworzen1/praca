@@ -17,22 +17,12 @@ top:200,
 left:375,
 color:"white"
   },
-  dataL: {
-    position:"absolute",
-    top:200,
-    left:375,
-    color:"black"
-      },
   button:{
     position:"absolute",
     top:30,
     right:30,
   },
-  buttonL:{
-    position:"absolute",
-    top:30,
-    right:30,
-  },
+
 
 });
 
@@ -40,7 +30,7 @@ color:"white"
 const Profile = () => {
 
 const classes = useStyles();
-const {Already, darkmode, Dark} = useCalories()
+const {Already} = useCalories()
 
   return (
     <div className="container">
@@ -48,18 +38,17 @@ const {Already, darkmode, Dark} = useCalories()
       <Specyfies />
       <Calories />
       <Progress />
-      <Button onClick={Dark}>Change</Button>
       <LanguageSelector />
       <Button
             size="large"
             color="secondary"
             onClick={Already}
-            className={darkmode ? classes.button : classes.buttonL}
+            className={classes.button}
           >
             <Text tid="logout">logout</Text>
           </Button>
       <div>
-        <h1 className={ darkmode ? classes.data : classes.dataL}>{new Date().toLocaleDateString()}</h1>
+        <h1 className={classes.data}>{new Date().toLocaleDateString()}</h1>
       </div>
       <BMI />
 

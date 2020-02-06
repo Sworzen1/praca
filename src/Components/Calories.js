@@ -29,22 +29,15 @@ const useStyles = makeStyles(theme => ({
     paddingTop: "60px",
     color:"white"
   },
-  mainL: {
-    width: "274px",
-    textAlign: "center",
-    margin: "0 auto",
-    paddingTop: "60px",
-    color:"black"
-  },
 }));
 
 const Calories = () => {
   const classes = useStyles();
   
-  const { calories, darkmode, cal, v} = useCalories()
+  const { calories, cal, v} = useCalories()
 
   return (
-    <div className={darkmode ? classes.main : classes.mainL}>
+    <div className={classes.main}>
       <div className={classes.root}>
        <h1 className={classes.h3}><Text tid="calories">Calories </Text></h1>
         <BorderLinearProgress

@@ -11,13 +11,7 @@ const useStyles = makeStyles(theme => ({
     left: 340,
     color:"white"
   },
-  mainL: {
-    position: "absolute",
-    width: "200px",
-    paddingTop: "10px",
-    left: 340,
-    color:"black"
-  },
+
   text: {
     border: "2px solid black ",
     width: "200px",
@@ -36,27 +30,17 @@ const useStyles = makeStyles(theme => ({
     zIndex: 1,
     textAlign: "center"
   },
-  h1L: {
-    position: "absolute",
-    background: "transparent",
-    marginTop: "-11px",
-    marginLeft: "10px",
-    width: "50px",
-    background: "white",
-    zIndex: 1,
-    textAlign: "center"
-  },
   h2: {
     textAlign: "center"
   }
 }));
 const Name = () => {
-  const {darkmode, name} = useCalories();
+  const { name} = useCalories();
   const classes = useStyles();
   return (
-    <div className={darkmode ? classes.main : classes.mainL}>
+    <div className={classes.main}>
       <div className={ classes.text}>
-        <span className={darkmode ? classes.h1 : classes.h1L}><Text tid="name">Name</Text></span>
+        <span className={classes.h1 }><Text tid="name">Name</Text></span>
         <span className={classes.h2}>
           <h2>{name}</h2>
         </span>

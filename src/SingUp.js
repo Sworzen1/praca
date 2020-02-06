@@ -61,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const SingUp = () => {
-  const { Already } = useCalories();
+  const { Already, GoForm } = useCalories();
   const classes = useStyles();
   return (
     <div className={classes.main}>
@@ -108,7 +108,7 @@ const SingUp = () => {
         </div>
 
         <div>
-          <Button size="large" color="secondary" className={classes.button}>
+          <Button size="large" color="secondary" className={classes.button} onClick={GoForm}>
             Register
           </Button>
 

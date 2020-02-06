@@ -17,19 +17,7 @@ top:400,
 left:400,
 color:"white",
 },
-textL :{
-    width:"100px",
-    height:"120px",
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    border:"2px solid black",
-    borderRadius:10,
-    position:"absolute",
-    top:400,
-    left:400,
-    color:"black",
-    },
+
 h1:{
 
 textAlign:'center',
@@ -44,12 +32,12 @@ line:{
 
 const BMI = () => {
     
-    const {darkmode, bmi, TextBMI} = useCalories();
+    const {bmi, TextBMI} = useCalories();
     
    
     const classes = useStyles();
     return (
-        <div className={darkmode ? classes.text : classes.textL}>
+        <div className={classes.text}>
         <span className={classes.h1}>
             <h2 className={classes.h2}>{parseInt(bmi)}</h2>
           <h3><Text tid="bmi">Your BMI</Text></h3>

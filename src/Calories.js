@@ -10,6 +10,7 @@ const CaloriesProvider = props => {
   const initialHeight = localStorage.getItem("height");
   const initialLogin = localStorage.getItem("login");
 
+
   const [login, setLogin] = useState(initialLogin);
   const [carbo, setCarbo] = useState(0);
   const [protein, setProtein] = useState(0);
@@ -118,28 +119,28 @@ const CaloriesProvider = props => {
   }, [height]);
 
   useEffect(() => {
-    const carboFromMemory = localStorage.getItem("carbo");
+    const carboFromMemory = +localStorage.getItem("carbo");
     setCarbo((carboFromMemory));
   }, []);
 
   useEffect(() => {
-    const proteinFromMemory = localStorage.getItem("protein");
+    const proteinFromMemory = +localStorage.getItem("protein");
     setProtein((proteinFromMemory));
   }, []);
 
   useEffect(() => {
-    const fatFromMemory = localStorage.getItem("fat");
+    const fatFromMemory = +localStorage.getItem("fat");
     setFat((fatFromMemory));
   }, []);
 
   useEffect(() => {
-    const caloriesFromMemory = localStorage.getItem("calories");
+    const caloriesFromMemory = +localStorage.getItem("calories");
     setCalories((caloriesFromMemory));
   }, []);
   
   const addCalories = (carboToAdd, proteinToAdd, fatToAdd, caloriesToAdd) => {
     setCarbo(carbo + carboToAdd);
-    localStorage.setItem("carbo", carbo + carboToAdd);
+    localStorage.setItem("carbo",carbo + carboToAdd);
 
     setProtein(protein + proteinToAdd);
     localStorage.setItem("protein", protein + proteinToAdd);
@@ -150,7 +151,6 @@ const CaloriesProvider = props => {
     setCalories(calories + caloriesToAdd);
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
-
   const Dark = () => {
     setDark(!darkmode);
   };
@@ -166,12 +166,16 @@ const CaloriesProvider = props => {
   const Already = () => {
     setLogin(0);
   };
+  const GoForm = () => {
+    setLogin(3);
+  }
 
   return (
     <Provider
       value={{
         Already,
         Register,
+        GoForm,
         protein,
         addCalories,
         carbo,
@@ -198,7 +202,7 @@ const CaloriesProvider = props => {
         z,
         v,
         bmi,
-        TextBMI
+        TextBMI,
       }}
     >
       {props.children}

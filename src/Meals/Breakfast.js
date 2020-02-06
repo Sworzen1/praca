@@ -24,7 +24,7 @@ const Breakfast = () => {
       {recipesbreakfast.map(item=>{
         return (
           <Card1 title={item.title} description={item.description} titleRecipe={item.titleRecipe} 
-          descRecipe={item.descRecipe} carbo={item.carbo} protein={item.protein} fat={item.fat} calories={item.calories}/>
+          descRecipe={item.descRecipe} carbo={item.carbo} protein={item.protein} fat={item.fat} calories={item.calories} xd={item.xd}/>
         )
       })}
       </div>

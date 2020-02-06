@@ -25,7 +25,7 @@ const useStyles = makeStyles({
   },
   img: {
     height: 140,
-    backgroundImage: `url(${placki})`
+  
   },
   typo2: {
     color: "rgb(255,255,255,0.5)"
@@ -92,7 +92,7 @@ const Card1 = props => {
   return (
     <div>
       <Card className={classes.card}>
-        <CardMedia className={classes.img} />
+        <CardMedia className={classes.img} style={{backgroundImage: "url("+props.xd+")"}} />
         <CardContent>
           <Typography
             gutterBottom

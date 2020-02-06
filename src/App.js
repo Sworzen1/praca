@@ -13,6 +13,7 @@ import { useCalories } from "./Calories";
 import SingIn from "./SingIn";
 import SingUp from "./SingUp";
 import Form from "./Form";
+import FormStart from "./FormStart";
 import { LanguageProvider } from "./Lang/Language";
 
 const App = () => {
@@ -22,6 +23,9 @@ const App = () => {
     return <SingIn />;
   } else if (login == 1) {
     return <SingUp />;
+  }
+  else if (login==3){
+    return <FormStart/>;
   }
 
   return (

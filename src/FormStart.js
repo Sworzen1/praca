@@ -6,16 +6,17 @@ import { useCalories } from "./Calories";
 const useStyles = makeStyles(theme => ({
   box1: {
     width: "100%",
-    height: "100%",
+    height: "100vh",
     display: "flex",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "#17161a"
   },
   box2: {
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
     width: "30%",
-    height: "45%",
+    height: "60%",
     padding: "30px",
     color: "white"
   },
@@ -45,11 +46,17 @@ const useStyles = makeStyles(theme => ({
       WebkitTextFillColor: "white",
       WebkitBoxShadow: "0 0 0px 1000px transparent inset"
     }
+  },
+  xd:{
+    backgroundColor:"transparent",
+    width:"80px",
+    height:"45px"
   }
 }));
 
 const Form = () => {
-  const { addAge, addWeight, addHeight } = useCalories();
+  const { addName, addAge, addWeight, addHeight, LoggedIn } = useCalories();
+  const [titleName, setTitle] = useState("")
   const [titleAge,setAge] = useState("");
   const [titleWeight,setWeight] = useState("");
   const [titleHeight,setHeight] = useState("");
@@ -57,12 +64,18 @@ const Form = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    addName(titleName);
+    setTitle("");
     addAge(titleAge);
     setAge("");
     addWeight(titleWeight);
     setWeight("");
     addHeight(titleHeight);
     setHeight("");
+    LoggedIn()
+  };
+  const handleChange = e => {
+    setTitle(e.target.value);
   };
 
   const handleChangeAge = e => {
@@ -78,7 +91,23 @@ const Form = () => {
   return (
     <div className={classes.box1}>
       <div className={classes.box2}>
-        <form onSubmit={handleSubmit}>    
+        {/* NAME */}
+        <form onSubmit={handleSubmit}>
+          <div className={classes.formfield}>
+            <label className={classes.label} htmlFor="name">
+             NICK NAME
+            </label>
+            <input
+              onChange={handleChange}
+              value={titleName}
+              type="text"
+              id="name"
+              className={classes.input}
+              placeholder="Enter your nick name"
+              name="name"
+              required
+            ></input>
+          </div>
           {/* AGE */}
           <div className={classes.formfield}>
             <label className={classes.label} htmlFor="name">
@@ -133,8 +162,7 @@ const Form = () => {
               required
             ></input>
           </div>
-
-          <Button size="large" color="secondary" type="submit">
+          <Button size="large" color="secondary" type="submit" >
             Submit
           </Button>
         </form>

@@ -129,7 +129,10 @@ const Card1 = props => {
         open={open}
       >
         <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-          {props.titleRecipe}
+        <img src="https://img.icons8.com/ios/30/000000/caloric-energy--v2.png" style={{marginLeft:"13px"}} /> : {props.calories}
+        <img src="https://img.icons8.com/ios/30/000000/wheat.png" style={{marginLeft:"33px"}}/> : {props.carbo }  
+        <img src="https://img.icons8.com/ios/30/000000/jamon.png" style={{marginLeft:"38px"}}/> : {props.protein}
+        <img src="https://img.icons8.com/ios/30/000000/fish-food.png" style={{marginLeft:"38px"}}/> : {props.fat}
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>{props.descRecipe}</Typography>

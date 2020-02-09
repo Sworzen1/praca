@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { useCalories } from "./Calories";
+import {Text} from "./Lang/Language";
 
 const useStyles = makeStyles(theme => ({
   box1: {
@@ -82,7 +83,7 @@ const Form = () => {
           {/* AGE */}
           <div className={classes.formfield}>
             <label className={classes.label} htmlFor="name">
-              AGE
+              <Text tid="age">AGE</Text>
             </label>
             <input
             onChange={handleChangeAge}
@@ -100,7 +101,7 @@ const Form = () => {
           {/* WEIGHT */}
           <div className={classes.formfield}>
             <label className={classes.label} htmlFor="name">
-              WEIGHT
+            <Text tid="weight">WEIGHT</Text>
             </label>
             <input
               onChange={handleChangeWeight}
@@ -118,7 +119,7 @@ const Form = () => {
           {/* HEIGHT */}
           <div className={classes.formfield}>
             <label className={classes.label} htmlFor="name">
-              HEIGHT
+            <Text tid="height">HEIGHT</Text>
             </label>
             <input
               onChange={handleChangeHeight}
@@ -135,7 +136,7 @@ const Form = () => {
           </div>
 
           <Button size="large" color="secondary" type="submit">
-            Submit
+            <Text tid="submit">Submit</Text>
           </Button>
         </form>
       </div>

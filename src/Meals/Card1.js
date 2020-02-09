@@ -13,6 +13,7 @@ import MuiDialogContent from "@material-ui/core/DialogContent";
 import MuiDialogActions from "@material-ui/core/DialogActions";
 import IconButton from "@material-ui/core/IconButton";
 import CloseIcon from "@material-ui/icons/Close";
+import {Text} from "../Lang/Language";
 
 
 const useStyles = makeStyles({
@@ -115,10 +116,10 @@ const Card1 = props => {
         <CardActions>
           <Button size="small" color="secondary"
             onClick={() => addCalories( props.carbo, props.protein, props.fat, props.calories)}>
-            Dodaj
+            <Text tid="add"></Text>
           </Button>
           <Button size="small" color="secondary" onClick={handleClickOpen}>
-            Przepis
+          <Text tid="recipe"></Text>
           </Button>
         </CardActions>
       </Card>

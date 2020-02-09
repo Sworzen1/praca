@@ -2,6 +2,8 @@ import React from "react"
 import FoodList from "./Foodes/FoodList";
 import FoodForm from "./Foodes/FoodForm";
 import { makeStyles } from "@material-ui/core/styles";
+import {Text} from "./Lang/Language";
+
 
 const useStyles = makeStyles({
   container: {
@@ -36,7 +38,7 @@ const MyFoods =  () => {
         <div className={classes.container}>
             
             <div className={classes.foodform}>
-            <h1 className={classes.title}>My Foods</h1>
+            <h1 className={classes.title}><Text tid="myfoods">My Foods</Text></h1>
             <FoodForm />
             </div>
             <div className={classes.content}>

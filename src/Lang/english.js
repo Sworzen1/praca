@@ -23,7 +23,11 @@ const english = {
     number:"Number:",
     address:"Address:",
     language:"Language",
-    myfoods:"My Foods"
+    myfoods:"My Foods",
+    nofood:"No food",
+    add:"ADD",
+    submit:"Submit",
+    recipe:"Recipe",
 
 
   };

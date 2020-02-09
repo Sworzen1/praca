@@ -1,4 +1,4 @@
-import React, { useState, createContext, useContext } from "react";
+import React, { useState, createContext, useContext, useEffect } from "react";
 
 import { languageOptions, dictionaryList } from "./index";
 
@@ -8,9 +8,26 @@ export const LanguageContext = createContext({
 });
 
 export function LanguageProvider(props) {
+
+  const initialState = () => {
+    const myLanguage = localStorage.getItem('myLanguage')
+    const obj = JSON.parse(myLanguage)
+    return obj || languageOptions[1]
+  }
+  const initialDictionary = () => {
+    const myLanguage = localStorage.getItem('myLanguage')
+    const obj = JSON.parse(myLanguage) || {id:"english"}
+    return dictionaryList[obj.id]
+  }
+
   const languageContext = useContext(LanguageContext);
-  const [language, setLanguage] = useState(languageContext.language);
-  const [dictionary, setDictionary] = useState(languageContext.dictionary);
+  const [language, setLanguage] = useState(initialState);
+  const [dictionary, setDictionary] = useState(initialDictionary);
+
+  useEffect(()=>{
+    const LanguageXd = JSON.stringify(language)
+    localStorage.setItem("myLanguage", LanguageXd)
+  },[language])
 
   const provider = {
     language,

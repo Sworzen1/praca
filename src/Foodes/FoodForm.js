@@ -1,6 +1,8 @@
 import React, { useState} from 'react'
 import { useCalories } from "../Calories";
 import { makeStyles } from "@material-ui/core/styles";
+import {Text} from "../Lang/Language";
+
 
 const useStyles = makeStyles({
   form:{
@@ -101,10 +103,12 @@ const FoodForm = () => {
 
 
   return (
+   
+
     <form onSubmit={handleSubmit} className={classes.form}>
       <input
         type="text"
-        placeholder="Add Title...."
+        placeholder="Add title ..."
         value={title}
         onChange={handleTitle}
         required
@@ -117,6 +121,8 @@ const FoodForm = () => {
         onChange={handleCalories}
         required
         className={classes.input2}
+        min="1"
+        max="2000"
       />
             <input
         type="number"
@@ -125,6 +131,8 @@ const FoodForm = () => {
         onChange={handleCarbo}
         required
         className={classes.input2}
+        min="1"
+        max="1000"
       />
             <input
         type="number"
@@ -133,6 +141,8 @@ const FoodForm = () => {
         onChange={handleProteins}
         required
         className={classes.input2}
+        min="1"
+        max="1000"
       />
             <input
         type="number"
@@ -141,10 +151,12 @@ const FoodForm = () => {
         onChange={handleFats}
         required
         className={classes.input2}
+        min="1"
+        max="1000"
       />
       <div className="buttons">
         <button type="submit" className={classes.button}>
-          ADD
+         <Text tid="add">ADD</Text>
         </button>
         
       </div>

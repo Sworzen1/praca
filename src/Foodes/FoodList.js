@@ -2,6 +2,7 @@ import React from "react";
 import { useCalories } from "../Calories";
 import FoodTask from "./FoodTask";
 import { makeStyles } from "@material-ui/core/styles";
+import {Text} from "../Lang/Language";
 
 const useStyles = makeStyles({
   container: {  
@@ -23,7 +24,7 @@ const FoodList = () => {
           })}
         </ul>
       ) : (
-        <div className="no-tasks">No Foods ...</div>
+        <div><Text tid="nofood">No Foods</Text> ...</div>
       )}
     </div>
   );

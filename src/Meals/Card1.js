@@ -7,7 +7,6 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import placki from "./images/placki.jpg";
 import Dialog from "@material-ui/core/Dialog";
 import MuiDialogTitle from "@material-ui/core/DialogTitle";
 import MuiDialogContent from "@material-ui/core/DialogContent";
@@ -21,7 +20,8 @@ const useStyles = makeStyles({
     maxWidth: 345,
     margin: "20px",
     backgroundColor: "#17161a",
-    color: "white"
+    color: "white",
+    border:"2px solid black"
   },
   img: {
     height: 140,

@@ -14,6 +14,7 @@ import SingIn from "./SingIn";
 import SingUp from "./SingUp";
 import Form from "./Form";
 import FormStart from "./FormStart";
+import MyFoods from "./MyFoods"
 import { LanguageProvider } from "./Lang/Language";
 
 const App = () => {
@@ -35,6 +36,9 @@ const App = () => {
         <Drawer />
         <main className={darkmode ? "main" : "mainLight"}>
           <Switch>
+            <Route path="/MyFoods">
+              <MyFoods />
+            </Route>
           <Route path="/Form">
               <Form />
             </Route>

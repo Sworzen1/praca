@@ -22,7 +22,9 @@ const english = {
     supper:"Supper",
     number:"Number:",
     address:"Address:",
-    language:"Language"
+    language:"Language",
+    myfoods:"My Foods"
+
 
   };
   

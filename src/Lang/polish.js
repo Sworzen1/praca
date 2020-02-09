@@ -23,6 +23,8 @@ const polish = {
     number:"Numer:",
     address:"Adres:",
     language:"Język",
+    myfoods:"Moje Posiłki"
+
   };
   
   export default polish;

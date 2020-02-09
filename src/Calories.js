@@ -1,5 +1,8 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
-const CaloriesContext = createContext();
+import uuid from 'uuid'
+
+
+ const CaloriesContext = createContext();
 
 const { Provider } = CaloriesContext;
 
@@ -9,7 +12,7 @@ const CaloriesProvider = props => {
   const initialWeight = localStorage.getItem("weight");
   const initialHeight = localStorage.getItem("height");
   const initialLogin = localStorage.getItem("login");
-
+  const initialTask = JSON.parse(localStorage.getItem('tasks')) || []
 
   const [login, setLogin] = useState(initialLogin);
   const [carbo, setCarbo] = useState(0);
@@ -31,6 +34,24 @@ const CaloriesProvider = props => {
   const [x , setX]= useState(0)
   const [bmi, setBmi] = useState(0)
   const [TextBMI, SetTextBMI] = useState(0)
+  const [tasks, setTasks] = useState(initialTask)
+
+
+  
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks))
+  }, [tasks])
+
+  // Add tasks
+  const addTask = (title,  calories2, carbos, proteins, fats2) => {
+    setTasks([...tasks, { title, calories2, carbos, proteins, fats2, id: uuid() }])
+  }
+
+  // Remove tasks
+  const removeTask = id => {
+    setTasks(tasks.filter(task => task.id !== id))
+  }
 
   useEffect(()=>{
     setCar(((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.5) / 4)
@@ -151,6 +172,21 @@ const CaloriesProvider = props => {
     setCalories(calories + caloriesToAdd);
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
+
+  const addProgres = ( carbos, proteins, fats2,calories2) => {
+    setCarbo(carbo + carbos);
+    localStorage.setItem("carbo",carbo + carbos);
+
+    setProtein(protein + proteins);
+    localStorage.setItem("protein", protein + proteins);
+
+    setFat(fat + fats2);
+    localStorage.setItem("fat", fat + fats2);
+
+    setCalories(calories + calories2);
+    localStorage.setItem("calories", calories + calories2);
+  };
+
   const Dark = () => {
     setDark(!darkmode);
   };
@@ -203,6 +239,10 @@ const CaloriesProvider = props => {
         v,
         bmi,
         TextBMI,
+        addProgres,
+        tasks,
+        addTask,
+        removeTask,
       }}
     >
       {props.children}

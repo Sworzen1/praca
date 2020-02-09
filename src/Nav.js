@@ -25,13 +25,18 @@ const z = useContext(LanguageContext);
       to: "/Foods"
     },
     {
+      title:z.dictionary.myfoods,
+      to:"/MyFoods"
+    },
+    {
       title: z.dictionary.contact,
       to: "/Contact"
     },
     {
       title:z.dictionary.form,
     to:"/Form"
-  }
+  },
+  
   ];
 
   return (

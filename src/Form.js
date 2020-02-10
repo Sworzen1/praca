@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { useCalories } from "./Calories";
@@ -76,6 +76,22 @@ const Form = () => {
     setHeight(e.target.value);
   };
 
+const [age1,setAge1] = useState('')
+const [height1,setHeight1] = useState('')
+const [weight1,setWeight1] = useState('')
+
+useEffect(() => {
+ if(localStorage.myLanguage[7]=="p"){
+   setAge1("Wprowadz wiek")
+   setHeight1("Wprowadz wysokosc")
+   setWeight1("Wprowadz wage")
+ }
+ else{
+   setAge1("Enter your age")
+   setHeight1("Enter your height")
+   setWeight1("Enter your weight")
+ }
+})
   return (
     <div className={classes.box1}>
       <div className={classes.box2}>
@@ -85,6 +101,7 @@ const Form = () => {
             <label className={classes.label} htmlFor="name">
               <Text tid="age">AGE</Text>
             </label>
+  
             <input
             onChange={handleChangeAge}
             value={titleAge}
@@ -93,10 +110,12 @@ const Form = () => {
               max="100"
               id="age"
               className={classes.input}
-              placeholder="Enter your age"
+              placeholder={age1}
               name="age"
               required
             ></input>
+           
+
           </div>
           {/* WEIGHT */}
           <div className={classes.formfield}>
@@ -111,7 +130,7 @@ const Form = () => {
               max="500"
               id="weight"
               className={classes.input}
-              placeholder="Enter your weight"
+              placeholder={weight1}
               name="weight"
               required
             ></input>
@@ -129,7 +148,7 @@ const Form = () => {
               max="250"
               id="height"
               className={classes.input}
-              placeholder="Enter your height"
+              placeholder={height1}
               name="height"
               required
             ></input>

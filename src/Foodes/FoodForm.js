@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState, useEffect} from 'react'
 import { useCalories } from "../Calories";
 import { makeStyles } from "@material-ui/core/styles";
 import {Text} from "../Lang/Language";
@@ -101,6 +101,30 @@ const FoodForm = () => {
     setFats(e.target.value)
   }
 
+  const [title1,setTitle1] = useState('')
+  const [calo,setCalo] = useState('')
+  const [carbo,setCarbo] = useState('')
+  const [proteins1, setProteins1] = useState('')
+  const [fats1, setFats1] = useState('')
+  
+  console.log(localStorage.myLanguage[7])
+  useEffect(() => {
+   if(localStorage.myLanguage[7]=="p"){
+     setTitle1("Dodaj tytuł ...")
+     setCalo("Kalorie")
+     setCarbo("Węgle")
+     setProteins1("Białka")
+     setFats1("Tłuszcze")
+   }
+   else{
+    setTitle1("Add title ...")
+    setCalo("Calories")
+    setCarbo("Carbos")
+    setProteins1("Proteins")
+    setFats1("Fats")
+   }
+  })
+
 
   return (
    
@@ -108,7 +132,7 @@ const FoodForm = () => {
     <form onSubmit={handleSubmit} className={classes.form}>
       <input
         type="text"
-        placeholder="Add title ..."
+        placeholder={title1}
         value={title}
         onChange={handleTitle}
         required
@@ -116,7 +140,7 @@ const FoodForm = () => {
       />
             <input
         type="number"
-        placeholder="Calories"
+        placeholder={calo}
         value={calories2}
         onChange={handleCalories}
         required
@@ -126,7 +150,7 @@ const FoodForm = () => {
       />
             <input
         type="number"
-        placeholder="Carbos"
+        placeholder={carbo}
         value={carbos}
         onChange={handleCarbo}
         required
@@ -136,7 +160,7 @@ const FoodForm = () => {
       />
             <input
         type="number"
-        placeholder="Proteins"
+        placeholder={proteins1}
         value={proteins}
         onChange={handleProteins}
         required
@@ -146,7 +170,7 @@ const FoodForm = () => {
       />
             <input
         type="number"
-        placeholder="Fats"
+        placeholder={fats1}
         value={fats2}
         onChange={handleFats}
         required

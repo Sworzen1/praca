@@ -7,10 +7,21 @@ import {Text} from "../Lang/Language";
 const useStyles = makeStyles({
   form:{
     display:"flex",
-    flexDirection:"row"
+    flexDirection:"column",
+    width:"100vw",
+    margin:"auto",
+    justifyContent:"center",
+    alignItems:"center",
+    position:"relative",
+    top:130
+  },
+  form2:{
+    display:"grid",
+    gridTemplateColumns:"auto auto",
+    gridColumnGap:"10px"
   },
   input: {
-    width: "180px",
+    width: "210px",
     backgroundColor: "transparent",
     border: "none",
     color: "white",
@@ -19,12 +30,11 @@ const useStyles = makeStyles({
     fontSize: "1em",
     fontWeight: "300",
     padding: "10px",
-    marginLeft: "10px",
     borderRadius: 35
 
   },
   input2:{
-    width: "80px",
+    width: "90px",
     backgroundColor: "transparent",
     border: "none",
     color: "white",
@@ -33,8 +43,9 @@ const useStyles = makeStyles({
     fontSize: "1em",
     fontWeight: "300",
     padding: "10px",
-    marginLeft: "10px",
-    borderRadius: 35
+    borderRadius: 35,
+    marginTop:10,
+   
 
   },
   button:{
@@ -47,6 +58,7 @@ const useStyles = makeStyles({
     fontSize:"20px",
     border:"none",
     cursor:"pointer",
+    marginTop:10,
     '&:hover':{
       backgroundColor:"#f50057",
       color:"black",
@@ -138,6 +150,7 @@ const FoodForm = () => {
         required
         className={classes.input}
       />
+      <div className={classes.form2}>
             <input
         type="number"
         placeholder={calo}
@@ -182,7 +195,7 @@ const FoodForm = () => {
         <button type="submit" className={classes.button}>
          <Text tid="add">ADD</Text>
         </button>
-        
+        </div>
       </div>
     </form>
   )

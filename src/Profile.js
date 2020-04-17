@@ -11,19 +11,26 @@ import {Text} from "./Lang/Language";
 import LanguageSelector from "./Lang/LanguageSelector";
 
 const useStyles = makeStyles({
+container:{
+  backgroundColor:"#17161a",
+  overflow:"hidden",
+  height:"160vh"
+},
   data: {
 position:"absolute",
 top:200,
 left:375,
-color:"white"
+color:"white",
+display:"none"
   },
   button:{
     position:"absolute",
     top:30,
     right:30,
   },
-
-
+  selector:{
+    display:"none",
+  },
 });
 
 
@@ -33,12 +40,14 @@ const classes = useStyles();
 const {Already} = useCalories()
 
   return (
-    <div className="container">
+    <div className={classes.container}>
       <Name />
       <Specyfies />
       <Calories />
       <Progress />
-      <LanguageSelector />
+      <div className={classes.selector}>
+      <LanguageSelector  />
+      </div>
       <Button
             size="large"
             color="secondary"

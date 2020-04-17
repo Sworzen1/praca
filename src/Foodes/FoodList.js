@@ -6,8 +6,20 @@ import {Text} from "../Lang/Language";
 
 const useStyles = makeStyles({
   container: {  
-    color:"white" 
+    color:"white",
+    position:"absolute",
+    top:190,
+
   },
+  tekst:{
+    width:"100vw",
+    textAlign:"center"
+  },
+  list:{
+    // maxHeight:"30vh",
+    // overflow:"hidden",
+    // overflowY:"auto"
+  }
   
 });
 
@@ -18,13 +30,13 @@ const FoodList = () => {
   return (
     <div className={classes.container}>
       {tasks.length ? (
-        <ul className="list">
+        <ul className={classes.list}>
           {tasks.map(task => {
             return <FoodTask task={task} key={task.id} />;
           })}
         </ul>
       ) : (
-        <div><Text tid="nofood">No Foods</Text> ...</div>
+        <div className={classes.tekst}><Text tid="nofood">No Foods</Text> ...</div>
       )}
     </div>
   );

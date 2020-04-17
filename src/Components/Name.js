@@ -6,18 +6,25 @@ import {useCalories} from "../Calories";
 const useStyles = makeStyles(theme => ({
   main: {
     position: "absolute",
-    width: "200px",
-    paddingTop: "10px",
-    left: 340,
-    color:"white"
+    // width: "200px",
+    // paddingTop: "10px",
+    // left: 340,
+    color:"white",
+    top:70,
+    width: "100vw",
+    display:"flex",
+   
+
+    
   },
 
   text: {
     border: "2px solid black ",
     width: "200px",
-    height: "70px",
-    margin: "10px",
-    borderRadius: 10
+    height: "50px",
+    borderRadius: 10,
+    margin:"auto",
+   
   },
 
   h1: {
@@ -31,7 +38,11 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center"
   },
   h2: {
-    textAlign: "center"
+    textAlign: "center",
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    height: "inherit",
   }
 }));
 const Name = () => {

@@ -6,14 +6,15 @@ import {Text} from "../Lang/Language"
 
 const BorderLinearProgress = withStyles({
   root: {
-    height: "270px",
-    width: "270px",
+    height: "240px",
+    width: "240px",
     borderRadius: "50%",
     backgroundColor: lighten("#ff6c5c", 0.5),
     textAlign: "center",
     background: "red",
     border: "solid 2px black",
-    transform: "rotate(-90deg)"
+    transform: "rotate(-90deg)",
+
   },
   bar: {
     borderRadius: 10,
@@ -23,12 +24,20 @@ const BorderLinearProgress = withStyles({
 
 const useStyles = makeStyles(theme => ({
   main: {
-    width: "274px",
+    width: "100vw",
     textAlign: "center",
-    margin: "0 auto",
+    margin: "auto",
     paddingTop: "60px",
-    color:"white"
+    color:"white",
+    position:"absolute",
+    top:210,
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center"
   },
+  h3: {
+    fontSize:"30px"
+  }
 }));
 
 const Calories = () => {

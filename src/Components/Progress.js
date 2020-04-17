@@ -12,7 +12,7 @@ const BorderLinearProgress = withStyles({
     borderRadius: 50,
     backgroundColor: lighten("#ff6c5c", 0.5),
     textAlign: "center",
-    border: "solid 2px black"
+    border: "solid 2px black",
   },
   bar: {
     borderRadius: 20,
@@ -22,20 +22,28 @@ const BorderLinearProgress = withStyles({
 
 const useStyles = makeStyles(theme => ({
   margin: {
-    margin: theme.spacing(3)
+    margin: "auto"
   },
   ProgressBars: {
     textAlign: "center",
-    width: "300px",
+    width: "100vw",
     position: "absolute",
-    right: 20,
-    top: 120,
+    top: 610,
     lineHeight:"1px" ,
-    color:"white"
+    color:"white",
+    display:"flex",
+    margin:"auto",
+    flexDirection:"column",
+    height:"300px"
+    
   },
   all:{
-marginTop:"100px"
+marginTop:"25px"
   },
+  output:{
+    top:10,
+    position:"relative"
+  }
 }));
 
 const Progress = () => {
@@ -56,7 +64,7 @@ const Progress = () => {
             color="secondary"
             value={x}
           />
-          <output> {carbo} / {parseInt(car)} </output>
+          <output className={classes.output}> {carbo} / {parseInt(car)} </output>
           
        
         </div>
@@ -71,7 +79,7 @@ const Progress = () => {
             color="secondary"
             value={y}
           />
-           <output> {protein} / {parseInt(pro)}</output>
+           <output className={classes.output}> {protein} / {parseInt(pro)}</output>
         </div>
       </div>
 
@@ -84,7 +92,7 @@ const Progress = () => {
             color="secondary"
             value={z}
           />
-           <output> {fat} / {parseInt(fats)} </output>
+           <output className={classes.output}> {fat} / {parseInt(fats)} </output>
         </div>
       </div>
     </div>

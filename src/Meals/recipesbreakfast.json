@@ -8,14 +8,20 @@
         "carbo": 100,
         "protein": 30,
         "fat":5,
-        "calories":300
+        "calories":300,
+        "xd":"https://www.makroprzepisy.pl/images/app/recipes/2019/06/258/977b1207050ed6480e1c8ec6d2aae2b2.jpeg"
     },
     {
-        "title":"Gowno",
+        "title":"Jajecznica",
         "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
         "titleRecipe":"Cos tu",
         "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "id": 2,
+        "carbo": 100,
+        "protein": 30,
+        "fat":5,
+        "calories":300,
+        "xd":"https://2.bp.blogspot.com/-0z9rRWUwNF8/VeA-AJ3O32I/AAAAAAAAA3E/PgtpWKarLgo/s1600/j4.jpg"
 
     },
     {

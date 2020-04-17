@@ -4,30 +4,50 @@ import {Text} from "../Lang/Language";
 import {useCalories} from "../Calories";
 
 const useStyles = makeStyles(theme => ({
-text :{
-width:"100px",
-height:"120px",
+main :{
+width:"100vw",
+height:"70px",
 display:'flex',
 alignItems:'center',
 justifyContent:'center',
-border:"2px solid black",
 borderRadius:10,
 position:"absolute",
-top:400,
-left:400,
+top:215,
 color:"white",
+
 },
 
-h1:{
+ text: {
+    border: "2px solid black ",
+    width: "60%",
+    height: "50px",
+    borderRadius: 10,
+    margin:"auto"
+    
+  },
 
-textAlign:'center',
-lineHeight:'2px',
-},
-
+  h1: {
+    position: "absolute",
+    background: "transparent",
+    marginTop: "-11px",
+    marginLeft: "15px",
+    width: "40px",
+    background: "#17161a",
+    zIndex: 1,
+    textAlign: "center",
+    fontSize:15
+  },
+  h2: {
+    display:"flex",
+    alignItems:"center",
+    height:"inherit",
+    justifyContent:"space-around",
+  },
 line:{
  borderBottom:'2px solid red',
  lineHeight:'20px',
-}
+},
+
 }));
 
 const BMI = () => {
@@ -37,13 +57,17 @@ const BMI = () => {
    
     const classes = useStyles();
     return (
-        <div className={classes.text}>
-        <span className={classes.h1}>
-            <h2 className={classes.h2}>{parseInt(bmi)}</h2>
-          <h3><Text tid="bmi">Your BMI</Text></h3>
-    <h4 className={classes.line}>{TextBMI}</h4>
-        
-          </span>
+        <div className={classes.main}>
+
+
+<div className={classes.text}>
+       <span className={classes.h1}>BMI</span>
+        <span className={classes.h2}>
+        <h2 >{parseInt(bmi)}</h2>
+        <h4 className={classes.line}>{TextBMI}</h4>
+        </span>
+      </div>
+             
         
       </div>
     )

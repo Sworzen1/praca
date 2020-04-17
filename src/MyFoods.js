@@ -6,17 +6,11 @@ import {Text} from "./Lang/Language";
 
 
 const useStyles = makeStyles({
-  container: {
-   
-   display: "flex",
-   alignItems: "center",
-   justifyContent: "center",
-   
-  },
+
   content: {
       position:"absolute",
     top:150,
-    width:"65%",
+    width:"90%",
   },
   foodform:{
       position:"absolute",
@@ -26,7 +20,9 @@ const useStyles = makeStyles({
   },
   title:{
       color:"white",
-      marginLeft:"30px"
+      position:"absolute",
+      marginLeft:"40px",
+      top:50
   }     
 
 });

@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    height:"70px",
+    height:"50px",
     color:"white",
     fontSize:20,
     '&:hover':{

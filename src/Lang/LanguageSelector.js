@@ -11,14 +11,15 @@ padding: ".25em",
 border: 0,
 borderBottom: "2px solid #f50057",
 fontWeight: "bold",
-width:"120px",
-height:"45px",
+width:"100px",
+height:"40px",
 borderRadius: 0,
 backgroundColor:"rgba(15,15,15,.4)",
 marginLeft:"30px",
 position:"absolute",
-top:25,
-right:150
+top:7,
+right:105
+
   },
 
 

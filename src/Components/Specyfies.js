@@ -6,22 +6,24 @@ import {useCalories} from "../Calories"
 const useStyles = makeStyles(theme => ({
   main: {
     display: "flex",
-    width: "350px",
-    paddingTop: "10px",
-    margin: "0 auto",
+    position:"absolute",
+    width: "100vw",
+    margin:"auto",
+   top:130,
     color:"white",
+
   },
   text: {
     border: "2px solid black ",
     width: "100px",
-    height: "70px",
+    height: "50px",
     margin: "10px",
     borderRadius: 10
   },
   text1: {
     border: "2px solid black ",
     width: "100px",
-    height: "85px",
+    height: "65px",
     margin: "10px",
     borderRadius: 10
   },
@@ -33,10 +35,14 @@ const useStyles = makeStyles(theme => ({
     width: "50px",
     background: "#17161a",
     zIndex: 1,
-    textAlign: "center"
+    textAlign: "center",
+    fontSize:15
   },
   h2: {
-    textAlign: "center"
+    display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    height:"inherit"
   }
 }));
 

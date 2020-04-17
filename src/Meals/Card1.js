@@ -19,17 +19,30 @@ import {Text} from "../Lang/Language";
 const useStyles = makeStyles({
   card: {
     maxWidth: 345,
-    margin: "20px",
+    margin:"20px 30px 10px 30px",
     backgroundColor: "#17161a",
     color: "white",
     border:"2px solid black"
   },
   img: {
-    height: 140,
-  
+    height: 110,
+    
+  },
+  typo1:{
+    fontSize:"19px"
   },
   typo2: {
-    color: "rgb(255,255,255,0.5)"
+    color: "rgb(255,255,255,0.5)",
+    fontSize:"12px",
+  },
+  contentCard:{
+    height:"65px"
+  },
+  containerMacro:{
+    width:"60vw",
+    display:"grid",
+    gridTemplateColumns:"auto auto auto auto ",
+    fontSize:"15px"
   }
 });
 
@@ -94,7 +107,7 @@ const Card1 = props => {
     <div>
       <Card className={classes.card}>
         <CardMedia className={classes.img} style={{backgroundImage: "url("+props.xd+")"}} />
-        <CardContent>
+        <CardContent className={classes.contentCard}>
           <Typography
             gutterBottom
             variant="h5"
@@ -129,11 +142,11 @@ const Card1 = props => {
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <DialogTitle id="customized-dialog-title" onClose={handleClose}>
-        <img src="https://img.icons8.com/ios/30/000000/caloric-energy--v2.png" style={{marginLeft:"13px"}} /> : {props.calories}
-        <img src="https://img.icons8.com/ios/30/000000/wheat.png" style={{marginLeft:"33px"}}/> : {props.carbo }  
-        <img src="https://img.icons8.com/ios/30/000000/jamon.png" style={{marginLeft:"38px"}}/> : {props.protein}
-        <img src="https://img.icons8.com/ios/30/000000/fish-food.png" style={{marginLeft:"38px"}}/> : {props.fat}
+        <DialogTitle id="customized-dialog-title" onClose={handleClose} className={classes.dialogTitle}>
+        <div className={classes.containerMacro}><img src="https://img.icons8.com/ios/25/000000/caloric-energy--v2.png"  /> : {props.calories}
+        <img src="https://img.icons8.com/ios/25/000000/wheat.png" /> : {props.carbo } 
+        <img src="https://img.icons8.com/ios/25/000000/jamon.png"/> : {props.protein}
+        <img src="https://img.icons8.com/ios/25/000000/fish-food.png" /> : {props.fat}</div>
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>{props.descRecipe}</Typography>

@@ -15,8 +15,7 @@ const useStyles = makeStyles(theme => ({
   box2: {
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
-    width: "30%",
-    height: "45%",
+    width: "60%",
     padding: "30px",
     color: "white"
   },

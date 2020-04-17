@@ -16,6 +16,7 @@ import Form from "./Form";
 import FormStart from "./FormStart";
 import MyFoods from "./MyFoods"
 import { LanguageProvider } from "./Lang/Language";
+import Drawertest from "./Drawertest"
 
 const App = () => {
   const { login, darkmode } = useCalories();
@@ -33,7 +34,7 @@ const App = () => {
     <LanguageProvider>
     <Router>
       <div className={"app"}>
-        <Drawer />
+        <Drawertest />
         <main className={darkmode ? "main" : "mainLight"}>
           <Switch>
             <Route path="/MyFoods">

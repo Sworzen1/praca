@@ -10,8 +10,8 @@ const useStyles = makeStyles({
   },
   main2: {
     display: "grid",
-    gridTemplateColumns:"auto auto auto"
-    
+    gridTemplateColumns:"auto ",
+    backgroundColor:"#17161a"
   }
 });
 

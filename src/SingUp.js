@@ -18,10 +18,8 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     backgroundColor: "rgba(15,15,15,.8)",
-    width: "30%",
-    height: "65%",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
-    padding: "30px"
+    padding: "15px"
   },
   label: {
     display: "block",
@@ -53,10 +51,12 @@ const useStyles = makeStyles(theme => ({
     display: "inline-block",
     borderBottom: "1.5px solid #f50057",
     paddingBottom: "5px",
-    marginLeft: "30px"
+    marginLeft: "10px",
+    width:"47vw",
+    fontSize:"13px"
   },
   title: {
-    marginBottom: "50px"
+    marginBottom: "30px"
   }
 }));
 

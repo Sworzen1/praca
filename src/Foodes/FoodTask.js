@@ -23,7 +23,10 @@ const useStyles = makeStyles({
     marginBottom:"10px",
     // maxWidth:"310px",
     fontSize:"13px",
-    wordBreak:"break-all"
+    wordBreak:"break-all",
+    '@media(min-width:375px)':{
+      fontSize:"20px"
+    }
   },
   info:{
     padding:"2px",
@@ -33,6 +36,9 @@ const useStyles = makeStyles({
     display:"flex",
     flexDirection:"row",
     maxHeight:"30px",
+    '@media(min-width:375px)':{
+      fontSize:"15px"
+    }
     
   },
   buttons:{

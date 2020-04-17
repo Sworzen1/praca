@@ -75,6 +75,11 @@ code {
   z-index: 1;
   
 }
+@media (min-width:375px) {
+  .navbar1:hover .menu1 {
+    transform: scale(1.5);  
+  }
+}
 .navbar1 .menu1 li {
   /* position: absolute;
   top: -140px;

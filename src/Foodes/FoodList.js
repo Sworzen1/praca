@@ -16,9 +16,9 @@ const useStyles = makeStyles({
     textAlign:"center"
   },
   list:{
-    // maxHeight:"30vh",
-    // overflow:"hidden",
-    // overflowY:"auto"
+    maxHeight:"30vh",
+    overflow:"hidden",
+    overflowY:"auto"
   }
   
 });

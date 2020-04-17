@@ -8,7 +8,6 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     position:"absolute",
     width: "100vw",
-    margin:"auto",
    top:130,
     color:"white",
 
@@ -17,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     border: "2px solid black ",
     width: "100px",
     height: "50px",
-    margin: "10px",
+    margin:"auto",
     borderRadius: 10
   },
   text1: {

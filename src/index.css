@@ -80,6 +80,11 @@ code {
     transform: scale(1.5);  
   }
 }
+@media (min-width:425px) {
+  .navbar1:hover .menu1 {
+    transform: scale(1.7);  
+  }
+}
 .navbar1 .menu1 li {
   /* position: absolute;
   top: -140px;

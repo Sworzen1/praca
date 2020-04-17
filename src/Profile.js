@@ -23,11 +23,11 @@ left:375,
 color:"white",
 display:"none"
   },
-  button:{
-    position:"absolute",
-    top:30,
-    right:30,
-  },
+  // button:{
+  //   position:"absolute",
+  //   top:30,
+  //   right:30,
+  // },
   selector:{
     display:"none",
   },
@@ -37,7 +37,7 @@ display:"none"
 const Profile = () => {
 
 const classes = useStyles();
-const {Already} = useCalories()
+// const {Already} = useCalories()
 
   return (
     <div className={classes.container}>
@@ -48,14 +48,14 @@ const {Already} = useCalories()
       <div className={classes.selector}>
       <LanguageSelector  />
       </div>
-      <Button
+      {/* <Button
             size="large"
             color="secondary"
             onClick={Already}
             className={classes.button}
           >
             <Text tid="logout">logout</Text>
-          </Button>
+          </Button> */}
       <div>
         <h1 className={classes.data}>{new Date().toLocaleDateString()}</h1>
       </div>

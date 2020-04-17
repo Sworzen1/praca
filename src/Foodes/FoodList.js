@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   container: {  
     color:"white",
     position:"absolute",
-    top:190,
+    top:175,
 
   },
   tekst:{
@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     textAlign:"center"
   },
   list:{
-    maxHeight:"30vh",
+    maxHeight:"37vh",
     overflow:"hidden",
     overflowY:"auto"
   }

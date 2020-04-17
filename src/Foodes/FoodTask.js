@@ -26,6 +26,9 @@ const useStyles = makeStyles({
     wordBreak:"break-all",
     '@media(min-width:375px)':{
       fontSize:"20px"
+    },
+    '@media(min-width:425px)':{
+      fontSize:"22px"
     }
   },
   info:{
@@ -38,6 +41,9 @@ const useStyles = makeStyles({
     maxHeight:"30px",
     '@media(min-width:375px)':{
       fontSize:"15px"
+    },
+    '@media(min-width:425px)':{
+      fontSize:"17px"
     }
     
   },

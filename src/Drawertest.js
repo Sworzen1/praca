@@ -1,60 +1,50 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Button from "@material-ui/core/Button"
-import {Text} from "./Lang/Language";
-import Nav from "./Nav"
-import {useCalories} from "./Calories"
+import React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@material-ui/core/AppBar";
+import Drawer from "@material-ui/core/Drawer";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import Toolbar from "@material-ui/core/Toolbar";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import Button from "@material-ui/core/Button";
+import { Text } from "./Lang/Language";
+import Nav from "./Nav";
+import { useCalories } from "./Calories";
 import LanguageSelector from "./Lang/LanguageSelector";
 
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-  },
-  drawer: {
-    [theme.breakpoints.up('md')]: {
-      width: drawerWidth,
-      flexShrink: 0,
-    },
+    display: "flex",
   },
   appBar: {
-    [theme.breakpoints.up('md')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-    backgroundColor:"black"
+    width: "100vw",
+    marginLeft: drawerWidth,
+    backgroundColor: "black",
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('md')]: {
-      display: 'none',
-    },
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor:"#17161a",
+    backgroundColor: "#17161a",
+    boxShadow: "15px 1px 5px 0px rgba(0,0,0,0.3)",
+    "@media(min-width:1024px)": {
+      width: "320px",
+    },
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-  button:{
-    position:"absolute",
-    right:10,
-    top:5
+  button: {
+    position: "absolute",
+    right: 10,
+    top: 5,
   },
-  hidden:{
-    display:"none"
-  }
 }));
 
 function Drawertest(props) {
@@ -62,22 +52,14 @@ function Drawertest(props) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const {Already} = useCalories()
+  const { Already } = useCalories();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const drawer = (
-    <div>
-      <div className={classes.toolbar} />
-      {/* <Nav /> */}
-    </div>
-  );
-
   return (
     <div className={classes.root}>
-  
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <IconButton
@@ -87,51 +69,38 @@ function Drawertest(props) {
             onClick={handleDrawerToggle}
             className={classes.menuButton}
           >
-            <MenuIcon style={{color:"red"}}/>
+            <MenuIcon style={{ color: "red" }} />
           </IconButton>
-         
         </Toolbar>
         <LanguageSelector />
         <Button
-            size="large"
-            color="secondary"
-            onClick={Already}
-            className={classes.button}
-          >
-            <Text tid="logout">logout</Text>
-          </Button>
+          size="large"
+          color="secondary"
+          onClick={Already}
+          className={classes.button}
+        >
+          <Text tid="logout">logout</Text>
+        </Button>
       </AppBar>
-      <nav className={classes.drawer} aria-label="mailbox folders">
+      <nav aria-label="mailbox folders">
         <Hidden smUp implementation="css">
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            anchor="left"
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
               paper: classes.drawerPaper,
             }}
             ModalProps={{
-              keepMounted: true, 
+              keepMounted: true,
             }}
           >
-          <Nav />
-          </Drawer>
-        </Hidden>
-        <Hidden xsDown implementation="css" className={classes.hidden}>
-          <Drawer
-            classes={{
-              paper: classes.drawerPaper,
-            }}
-            variant="permanent"
-            open
-          >
-            {drawer}
+            <Nav />
           </Drawer>
         </Hidden>
       </nav>
-    
     </div>
   );
 }

@@ -26,7 +26,9 @@ const useStyles = makeStyles({
   },
   img: {
     height: 110,
-    
+    "@media(min-width:1024px)":{
+height:150
+    }
   },
   typo1:{
     fontSize:"19px"
@@ -34,17 +36,27 @@ const useStyles = makeStyles({
   typo2: {
     color: "rgb(255,255,255,0.5)",
     fontSize:"12px",
+    "@media(min-width:1024px)":{
+fontSize:"14px"
+    }
   },
   contentCard:{
-    height:"65px"
+    height:"65px",
+    "@media(min-width:1024px)":{
+      height:"80px"
+    }
   },
   containerMacro:{
     width:"60vw",
     display:"grid",
     gridTemplateColumns:"auto auto auto auto ",
     fontSize:"15px",
+    "@media(min-width:768px)": {
+     width:"30vw",
+     fontSize:"18px"
+    },
+  },
 
-  }
 });
 
 const Card1 = props => {
@@ -139,11 +151,12 @@ const Card1 = props => {
       </Card>
 
       <Dialog
+      className={classes.dialogTitle}
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
       >
-        <DialogTitle id="customized-dialog-title" onClose={handleClose} className={classes.dialogTitle}>
+        <DialogTitle id="customized-dialog-title" onClose={handleClose} >
         <div className={classes.containerMacro}><img src="https://img.icons8.com/ios/25/000000/caloric-energy--v2.png"  /> : {props.calories}
         <img src="https://img.icons8.com/ios/25/000000/wheat.png" /> : {props.carbo } 
         <img src="https://img.icons8.com/ios/25/000000/jamon.png"/> : {props.protein}

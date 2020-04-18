@@ -7,10 +7,14 @@ import {Text} from "./Lang/Language";
 
 const useStyles = makeStyles({
 
+
   content: {
       position:"absolute",
     top:150,
     width:"90%",
+    "@media(min-width:1024px)":{
+     width:"100%" 
+    }
   },
   foodform:{
       position:"absolute",
@@ -23,6 +27,9 @@ const useStyles = makeStyles({
       position:"absolute",
       marginLeft:"15%",
       top:50,
+      "@media(min-width:1024px)": {
+      top:80
+      },
 
   }     
 

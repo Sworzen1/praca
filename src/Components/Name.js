@@ -1,21 +1,18 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Text} from "../Lang/Language";
-import {useCalories} from "../Calories";
+import { Text } from "../Lang/Language";
+import { useCalories } from "../Calories";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   main: {
     position: "absolute",
     // width: "200px",
     // paddingTop: "10px",
     // left: 340,
-    color:"white",
-    top:80,
+    color: "white",
+    top: 80,
     width: "100vw",
-    display:"flex",
-   
-
-    
+    display: "flex",
   },
 
   text: {
@@ -23,9 +20,13 @@ const useStyles = makeStyles(theme => ({
     width: "200px",
     height: "50px",
     borderRadius: 10,
-    margin:"auto",
-    '@media(min-width:768px)':{
-      margin:15
+    margin: "auto",
+    "@media(min-width:768px)": {
+      margin: 15,
+    },
+    "@media(min-width:1024px)": {
+      width:"250px",
+      height:"70px",
     },
   },
 
@@ -37,23 +38,34 @@ const useStyles = makeStyles(theme => ({
     width: "50px",
     background: "#17161a",
     zIndex: 1,
-    textAlign: "center"
+    textAlign: "center",
+    "@media(min-width:1024px)": {
+      marginLeft:"15px",
+      fontSize:"18px",
+      width:"70px",
+      marginTop:"-13px"
+    },
   },
   h2: {
     textAlign: "center",
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     height: "inherit",
-  }
+    "@media(min-width:1024px)": {
+      fontSize:"20px"
+    },
+  },
 }));
 const Name = () => {
-  const { name} = useCalories();
+  const { name } = useCalories();
   const classes = useStyles();
   return (
     <div className={classes.main}>
-      <div className={ classes.text}>
-        <span className={classes.h1 }><Text tid="name">Name</Text></span>
+      <div className={classes.text}>
+        <span className={classes.h1}>
+          <Text tid="name">Name</Text>
+        </span>
         <span className={classes.h2}>
           <h2>{name}</h2>
         </span>

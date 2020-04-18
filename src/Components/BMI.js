@@ -12,12 +12,16 @@ alignItems:'center',
 justifyContent:'center',
 borderRadius:10,
 position:"absolute",
-top:215,
+top:225,
 color:"white",
 '@media(min-width:768px)':{
   top: 160,
   
  },
+ "@media(min-width:1024px)": {
+      top:200
+},
+ 
 
 },
 
@@ -30,6 +34,10 @@ color:"white",
     '@media(min-width:768px)':{
      width:"30%",
     },
+    "@media(min-width:1024px)": {
+      height:"70px",
+      fontSize:20
+    },
   },
 
   h1: {
@@ -41,7 +49,11 @@ color:"white",
     background: "#17161a",
     zIndex: 1,
     textAlign: "center",
-    fontSize:15
+    fontSize:15,
+    "@media(min-width:1024px)": {
+      fontSize:18,
+      width:"70px"
+    },
   },
   h2: {
     display:"flex",

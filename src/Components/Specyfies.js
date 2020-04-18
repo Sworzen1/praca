@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     position:"absolute",
     width: "100vw",
-   top:130,
+   top:140,
     color:"white",
     '@media(min-width:768px)':{
       top:80,
@@ -17,8 +17,7 @@ const useStyles = makeStyles(theme => ({
       // justifyContent:"center",
       // alignItems:"center",
       // marginLeft:"25%"
-    },
-
+    }
   },
   text: {
     border: "2px solid black ",
@@ -26,14 +25,22 @@ const useStyles = makeStyles(theme => ({
     height: "50px",
     margin:"auto",
     borderRadius: 10,
-
+    "@media(min-width:1024px)": {
+      width:"120px",
+      height:"70px",
+      fontSize:"20px"
+    },
   },
   text1: {
     border: "2px solid black ",
     width: "100px",
     height: "65px",
     margin: "10px",
-    borderRadius: 10
+    borderRadius: 10,
+    "@media(min-width:1024px)": {
+      width:"120px",
+      height:"85px"
+    },
   },
   h1: {
     position: "absolute",
@@ -44,7 +51,13 @@ const useStyles = makeStyles(theme => ({
     background: "#17161a",
     zIndex: 1,
     textAlign: "center",
-    fontSize:15
+    fontSize:15,
+    "@media(min-width:1024px)": {
+      fontSize:"18px",
+      marginTop:"-13px",
+      marginLeft:"14px",
+      width:"65px"
+    },
   },
   h2: {
     display:"flex",

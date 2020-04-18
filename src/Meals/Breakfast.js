@@ -9,6 +9,9 @@ const useStyles = makeStyles({
     height: "60vh",
     "@media(min-width:768px)":{
      marginTop:"70px" 
+    },
+    "@media(min-width:1024px)":{
+      marginTop:"80px"
     }
   },
   main2: {
@@ -17,7 +20,10 @@ const useStyles = makeStyles({
     backgroundColor:"#17161a",
     "@media(min-width:768px)":{
       gridTemplateColumns:"auto auto"
-    }
+    },
+    "@media(min-width:1024px)":{
+      gridTemplateColumns:"auto auto auto"
+    },
   }
 });
 

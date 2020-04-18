@@ -20,7 +20,10 @@ box1: {
     color:"white",
     "@media(min-width:768px)":{
       width:"35%"
-    }
+    },
+    "@media(min-width:1024px)": {
+      fontSize:"1.3em"
+    },
     
   },
   h3:{

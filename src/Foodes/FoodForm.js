@@ -16,6 +16,12 @@ const useStyles = makeStyles({
     top:130,
     "@media(min-width:768px)":{
       fontSize:"20px"
+    },
+    "@media(min-width:1024px)":{
+      width:"100%",
+      marginLeft:"35%",
+      marginTop:"55%"
+      
     }
   },
   form2:{
@@ -24,6 +30,10 @@ const useStyles = makeStyles({
     gridColumnGap:"10px",
     "@media(min-width:768px)":{
      gridTemplateColumns:"auto auto auto auto "
+    },
+    "@media(min-width:1024px)":{
+      gridTemplateColumns:"auto auto"
+
     }
   },
   input: {

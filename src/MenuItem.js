@@ -20,7 +20,11 @@ const useStyles = makeStyles(theme => ({
     fontSize:20,
     '&:hover':{
       borderRight:"5px solid #f50057",
-    }
+    },
+    "@media(min-width:1024px)": {
+      height:"70px",
+      marginTop:30
+    },
   },
   
 

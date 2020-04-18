@@ -16,7 +16,8 @@ container:{
   overflow:"hidden",
   height:"160vh",
   '@media(min-width:768px)':{
-height:"100vh"
+height:"100vh",
+// width:"100vw",
    },
 },
   data: {

@@ -16,7 +16,10 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
     padding: "30px",
-    color: "white"
+    color: "white",
+    "@media(min-width:1024px)":{
+      width:"30%"
+    }
   },
   formfield: {
     marginBottom: "40px"
@@ -26,7 +29,10 @@ const useStyles = makeStyles(theme => ({
     display: "block",
     textTransform: "uppercase",
     fontSize: ".9em",
-    color: "white"
+    color: "white",
+    "@media(min-width:1024px)":{
+      fontSize:"1.3em"
+    }
   },
   input: {
     width: "85%",
@@ -43,6 +49,9 @@ const useStyles = makeStyles(theme => ({
       transition: "background-color 5000s ease-in-out 0s",
       WebkitTextFillColor: "white",
       WebkitBoxShadow: "0 0 0px 1000px transparent inset"
+    },
+    "@media(min-width:1024px)":{
+      fontSize:"1.2em"
     }
   },
   xd:{

@@ -13,6 +13,10 @@ const BorderLinearProgress = withStyles({
     backgroundColor: lighten("#ff6c5c", 0.5),
     textAlign: "center",
     border: "solid 2px black",
+    "@media(min-width:1024px)": {
+      height:20,
+      width:"400px"
+    },
   },
   bar: {
     borderRadius: 20,
@@ -28,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     width: "100vw",
     position: "absolute",
-    top: 610,
+    top: 620,
     lineHeight:"1px" ,
     color:"white",
     display:"flex",
@@ -36,10 +40,13 @@ const useStyles = makeStyles(theme => ({
     flexDirection:"column",
     height:"300px",
     '@media(min-width:768px)':{
-      top:240,
-      right:40,
+      top:310,
+      right:"7%",
       width:"40vw",
      },
+     "@media(min-width:1024px)": {
+      right:70
+    },
   },
   all:{
 marginTop:"25px",
@@ -47,6 +54,14 @@ marginTop:"25px",
   output:{
     top:10,
     position:"relative",
+    "@media(min-width:1024px)": {
+      fontSize:"20px"
+    },
+  },
+  h4:{
+    "@media(min-width:1024px)": {
+      fontSize:"25px"
+    },
   }
 }));
 

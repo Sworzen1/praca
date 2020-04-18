@@ -14,6 +14,10 @@ const BorderLinearProgress = withStyles({
     background: "red",
     border: "solid 2px black",
     transform: "rotate(-90deg)",
+    "@media(min-width:1024px)": {
+      height:"350px",
+      width:"350px"
+    },
 
   },
   bar: {
@@ -30,20 +34,29 @@ const useStyles = makeStyles(theme => ({
     paddingTop: "60px",
     color:"white",
     position:"absolute",
-    top:210,
+    top:220,
     display:"flex",
     justifyContent:"center",
     alignItems:"center",
     '@media(min-width:768px)':{
-      top:140,
-      marginLeft:60,
+      top:180,
+      marginLeft:"8%",
       justifyContent:"start",
       alignItems:"none",
       width:"50vw"
      },
+     
   },
   h3: {
-    fontSize:"30px"
+    fontSize:"30px",
+    "@media(min-width:1024px)": {
+      fontSize:"40px"
+    },
+  },
+  text:{
+    "@media(min-width:1024px)": {
+      fontSize:23,
+    },
   }
 }));
 
@@ -63,7 +76,7 @@ const Calories = () => {
           value={v}
           
         />
-         <output> {calories} / {parseInt(cal)} </output>
+         <output className={classes.text}> {calories} / {parseInt(cal)} </output>
       </div>
     </div>
   );

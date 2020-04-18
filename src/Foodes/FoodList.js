@@ -8,10 +8,15 @@ const useStyles = makeStyles({
   container: {  
     color:"white",
     position:"absolute",
-    top:175,
+    top:190,
     display:"flex",
     "@media(min-width:768px)":{
-    width:"100vw"
+    width:"100vw",
+  },
+  "@media(min-width:1024px)":{
+   width:"50%" ,
+   top:0,
+   right:30 ,
   }
   },
   tekst:{
@@ -26,6 +31,9 @@ const useStyles = makeStyles({
     margin:"auto",
     "@media(min-width:768px)":{
     paddingInlineStart:"0",
+  },
+  "@media(min-width:1024px)":{
+   maxHeight:"70vh"   
   }
 }
   

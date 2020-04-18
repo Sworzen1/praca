@@ -19,13 +19,21 @@ const useStyles = makeStyles(theme => ({
   container: {
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
-    padding: "15px"
+    padding: "15px",
+    "@media(min-width:1024px)":{
+      width:"30%",
+      height:"60%",
+      padding:"25px"
+    }
   },
   label: {
     display: "block",
     textTransform: "uppercase",
     fontSize: ".9em",
     color: "white",
+    "@media(min-width:1024px)":{
+    fontSize:"1.3em"
+    }
     
   },
   input: {
@@ -43,6 +51,9 @@ const useStyles = makeStyles(theme => ({
       transition:"background-color 5000s ease-in-out 0s",
       WebkitTextFillColor:"white",
       WebkitBoxShadow:"0 0 0px 1000px transparent inset"
+    },
+    "@media(min-width:1024px)":{
+      fontSize:"1.2em"
     }
   },
   link: {
@@ -53,7 +64,10 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: "5px",
     marginLeft: "10px",
     // width:"47vw",
-    fontSize:"13px"
+    fontSize:"13px",
+    "@media(min-width:1024px)":{
+      fontSize:"18px"
+    }
   },
   title: {
     marginBottom: "30px"

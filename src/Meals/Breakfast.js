@@ -5,13 +5,19 @@ import recipesbreakfast from "./recipesbreakfast.json";
 
 const useStyles = makeStyles({
   main1: {
-    marginTop: "40px",
-    height: "60vh"
+    marginTop: "50px",
+    height: "60vh",
+    "@media(min-width:768px)":{
+     marginTop:"70px" 
+    }
   },
   main2: {
     display: "grid",
     gridTemplateColumns:"auto ",
-    backgroundColor:"#17161a"
+    backgroundColor:"#17161a",
+    "@media(min-width:768px)":{
+      gridTemplateColumns:"auto auto"
+    }
   }
 });
 

@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     // paddingTop: "10px",
     // left: 340,
     color:"white",
-    top:70,
+    top:80,
     width: "100vw",
     display:"flex",
    
@@ -24,7 +24,9 @@ const useStyles = makeStyles(theme => ({
     height: "50px",
     borderRadius: 10,
     margin:"auto",
-   
+    '@media(min-width:768px)':{
+      margin:15
+    },
   },
 
   h1: {

@@ -13,12 +13,18 @@ const useStyles = makeStyles({
     justifyContent:"center",
     alignItems:"center",
     position:"relative",
-    top:130
+    top:130,
+    "@media(min-width:768px)":{
+      fontSize:"20px"
+    }
   },
   form2:{
     display:"grid",
     gridTemplateColumns:"auto auto",
-    gridColumnGap:"10px"
+    gridColumnGap:"10px",
+    "@media(min-width:768px)":{
+     gridTemplateColumns:"auto auto auto auto "
+    }
   },
   input: {
     width: "210px",
@@ -30,7 +36,10 @@ const useStyles = makeStyles({
     fontSize: "1em",
     fontWeight: "300",
     padding: "10px",
-    borderRadius: 35
+    borderRadius: 35,
+    "@media(min-width:768px)":{
+      width:"280px"
+    }
 
   },
   input2:{
@@ -52,7 +61,7 @@ const useStyles = makeStyles({
     width:"80px",
     height:"50px",
     borderRadius: 10,
-    marginLeft: "30px",
+    // marginLeft: "30px",
     backgroundColor:"transparent",
     color:"#f50057",
     fontSize:"20px",
@@ -65,7 +74,8 @@ const useStyles = makeStyles({
       opacity:".7"
     }
 
-  }
+  },
+
 
   
 });
@@ -191,11 +201,12 @@ const FoodForm = () => {
         min="1"
         max="1000"
       />
-      <div className="buttons">
+      
+        </div>
+        <div className={classes.buttons}>
         <button type="submit" className={classes.button}>
          <Text tid="add">ADD</Text>
         </button>
-        </div>
       </div>
     </form>
   )

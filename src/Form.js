@@ -17,7 +17,10 @@ const useStyles = makeStyles(theme => ({
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
     width: "60%",
     padding: "30px",
-    color: "white"
+    color: "white",
+    "@media(min-width:768px)":{
+      width:"35%"
+    }
   },
   formfield: {
     marginBottom: "40px"

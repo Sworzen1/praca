@@ -9,17 +9,25 @@ const useStyles = makeStyles({
     color:"white",
     position:"absolute",
     top:175,
-
+    display:"flex",
+    "@media(min-width:768px)":{
+    width:"100vw"
+  }
   },
   tekst:{
     width:"100vw",
-    textAlign:"center"
+    textAlign:"center",
+
   },
   list:{
     maxHeight:"37vh",
     overflow:"hidden",
-    overflowY:"auto"
+    overflowY:"auto",
+    margin:"auto",
+    "@media(min-width:768px)":{
+    paddingInlineStart:"0",
   }
+}
   
 });
 

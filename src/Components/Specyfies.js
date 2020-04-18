@@ -10,6 +10,14 @@ const useStyles = makeStyles(theme => ({
     width: "100vw",
    top:130,
     color:"white",
+    '@media(min-width:768px)':{
+      top:80,
+      width:"50vw",
+      right:"0"
+      // justifyContent:"center",
+      // alignItems:"center",
+      // marginLeft:"25%"
+    },
 
   },
   text: {
@@ -17,7 +25,8 @@ const useStyles = makeStyles(theme => ({
     width: "100px",
     height: "50px",
     margin:"auto",
-    borderRadius: 10
+    borderRadius: 10,
+
   },
   text1: {
     border: "2px solid black ",

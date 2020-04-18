@@ -33,7 +33,14 @@ const useStyles = makeStyles(theme => ({
     top:210,
     display:"flex",
     justifyContent:"center",
-    alignItems:"center"
+    alignItems:"center",
+    '@media(min-width:768px)':{
+      top:140,
+      marginLeft:60,
+      justifyContent:"start",
+      alignItems:"none",
+      width:"50vw"
+     },
   },
   h3: {
     fontSize:"30px"

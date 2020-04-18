@@ -14,6 +14,10 @@ borderRadius:10,
 position:"absolute",
 top:215,
 color:"white",
+'@media(min-width:768px)':{
+  top: 160,
+  
+ },
 
 },
 
@@ -22,8 +26,10 @@ color:"white",
     width: "60%",
     height: "50px",
     borderRadius: 10,
-    margin:"auto"
-    
+    margin:"auto",
+    '@media(min-width:768px)':{
+     width:"30%",
+    },
   },
 
   h1: {

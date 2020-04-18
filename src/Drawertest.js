@@ -20,29 +20,28 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
-      
     },
     backgroundColor:"black"
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       display: 'none',
     },
   },
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor:"#17161a"
+    backgroundColor:"#17161a",
   },
   content: {
     flexGrow: 1,
@@ -52,6 +51,9 @@ const useStyles = makeStyles((theme) => ({
     position:"absolute",
     right:10,
     top:5
+  },
+  hidden:{
+    display:"none"
   }
 }));
 
@@ -69,7 +71,7 @@ function Drawertest(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <Nav />
+      {/* <Nav /> */}
     </div>
   );
 
@@ -117,7 +119,7 @@ function Drawertest(props) {
           <Nav />
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="css">
+        <Hidden xsDown implementation="css" className={classes.hidden}>
           <Drawer
             classes={{
               paper: classes.drawerPaper,

@@ -68,6 +68,7 @@ code {
   transform: transform 1.4s 0.07s;
   z-index: -1;
   background-color: #fff;
+ 
 }
 .navbar1:hover .menu1 {
   transform: scale(1.26);
@@ -85,6 +86,18 @@ code {
     transform: scale(1.7);  
   }
 }
+
+
+.navbar1:hover .menu1 li {
+  transition: all 0.7s;
+}
+.navbar1 i {
+  margin-top: 15px;
+ 
+  
+}
+
+
 .navbar1 .menu1 li {
   /* position: absolute;
   top: -140px;
@@ -99,14 +112,24 @@ code {
   
 }
 
-.navbar1:hover .menu1 li {
-  transition: all 0.7s;
+@media (min-width:768px) {
+  .navbar1:hover .menu1 {
+    transform: scale(1.9);  
+  }
+  .navbar1 {
+  width: 100px;
+  height: 100px;
 }
-.navbar1 i {
-  margin-top: 15px;
- 
-  
+.navbar1 .menu1 {
+  left:45px;
+  top: 15px;
 }
+.navbar1 .menu1 li {
+  transform-origin: 90px 90px;
+}
+
+}
+
 
 .navbar1 .menu1 li a {
   /* width: 85px;

@@ -14,7 +14,10 @@ const useStyles = makeStyles({
 container:{
   backgroundColor:"#17161a",
   overflow:"hidden",
-  height:"160vh"
+  height:"160vh",
+  '@media(min-width:768px)':{
+height:"100vh"
+   },
 },
   data: {
 position:"absolute",
@@ -31,6 +34,7 @@ display:"none"
   selector:{
     display:"none",
   },
+
 });
 
 
@@ -43,6 +47,7 @@ const classes = useStyles();
     <div className={classes.container}>
       <Name />
       <Specyfies />
+      <BMI />
       <Calories />
       <Progress />
       <div className={classes.selector}>
@@ -59,7 +64,7 @@ const classes = useStyles();
       <div>
         <h1 className={classes.data}>{new Date().toLocaleDateString()}</h1>
       </div>
-      <BMI />
+      
 
     </div>
   );

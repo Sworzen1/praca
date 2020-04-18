@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
     borderBottom: "1.5px solid #f50057",
     paddingBottom: "5px",
     marginLeft: "10px",
-    width:"47vw",
+    // width:"47vw",
     fontSize:"13px"
   },
   title: {

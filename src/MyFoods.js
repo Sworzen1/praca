@@ -21,8 +21,9 @@ const useStyles = makeStyles({
   title:{
       color:"white",
       position:"absolute",
-      marginLeft:"40px",
-      top:50
+      marginLeft:"15%",
+      top:50,
+
   }     
 
 });

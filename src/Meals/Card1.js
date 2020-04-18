@@ -22,7 +22,7 @@ const useStyles = makeStyles({
     margin:"20px 30px 10px 30px",
     backgroundColor: "#17161a",
     color: "white",
-    border:"2px solid black"
+    border:"2px solid black", 
   },
   img: {
     height: 110,
@@ -42,7 +42,8 @@ const useStyles = makeStyles({
     width:"60vw",
     display:"grid",
     gridTemplateColumns:"auto auto auto auto ",
-    fontSize:"15px"
+    fontSize:"15px",
+
   }
 });
 

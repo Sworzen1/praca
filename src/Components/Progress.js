@@ -34,15 +34,19 @@ const useStyles = makeStyles(theme => ({
     display:"flex",
     margin:"auto",
     flexDirection:"column",
-    height:"300px"
-    
+    height:"300px",
+    '@media(min-width:768px)':{
+      top:240,
+      right:40,
+      width:"40vw",
+     },
   },
   all:{
-marginTop:"25px"
+marginTop:"25px",
   },
   output:{
     top:10,
-    position:"relative"
+    position:"relative",
   }
 }));
 

@@ -28,6 +28,10 @@ const english = {
     add:"ADD",
     submit:"Submit",
     recipe:"Recipe",
+    email:"E-Mail Adress",
+    password:"Password",
+    nickName:"Nick Name"
+    
 
 
   };

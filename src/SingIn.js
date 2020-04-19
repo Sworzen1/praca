@@ -2,6 +2,7 @@ import React from "react";
 import { useCalories } from "./Calories";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
+import InputItem from "./InputItem"
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -13,9 +14,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     justifyContent: "center"
   },
-  formfield: {
-    marginBottom: "40px"
-  },
+ 
   container: {
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
@@ -26,35 +25,7 @@ const useStyles = makeStyles(theme => ({
       padding:"25px"
     }
   },
-  label: {
-    display: "block",
-    textTransform: "uppercase",
-    fontSize: ".9em",
-    color: "white",
-    "@media(min-width:1024px)":{
-      fontSize:"1.3em"
-    }
-  },
-  input: {
-    width: "85%",
-    backgroundColor: "transparent",
-    border: "none",
-    color: "white",
-    outline: "none",
-    borderBottom: "1px solid #f50057",
-    fontSize: "1em",
-    fontWeight: "300",
-    paddingBottom: "10px",
-    marginTop: "10px",
-    '&:-webkit-autofill':{
-      transition:"background-color 5000s ease-in-out 0s",
-      WebkitTextFillColor:"white",
-      WebkitBoxShadow:"0 0 0px 1000px transparent inset"
-    },
-    "@media(min-width:1024px)":{
-      fontSize:"1.2em"
-    }
-  },
+
   link: {
     cursor: "pointer",
     textDecoration: "none",
@@ -74,38 +45,49 @@ const useStyles = makeStyles(theme => ({
 const SingIn = () => {
   const { Register, LoggedIn } = useCalories();
   const classes = useStyles();
+
+  const inputs = [
+    {
+      title: "E-Mail Adress",
+      placeholder: "Eneter your e-mail",
+      tid: "email",
+      max: "12",
+      type: "email",
+      htmlFor:"email",
+      name:"email"
+    },
+    {
+      title: "Password",
+      placeholder: "Enter your password",
+      tid: "password",
+      max: "12",
+      type: "password",
+      htmlFor:"password",
+      name:"password"
+    },
+  ]
+
   return (
     <div className={classes.main}>
       <div className={classes.container}>
         <h2 className={classes.title}>SingIn</h2>
 
-        <div className={classes.formfield}>
-          <label className={classes.label} htmlFor="email">
-            E-Mail Adress
-          </label>
-          <input
-            type="email"
-            id="email"
-            className={classes.input}
-            placeholder="Enter your e-mail"
-            name="email"
-            required
-          ></input>
-        </div>
-
-        <div className={classes.formfield}>
-          <label className={classes.label} htmlFor="password">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            className={classes.input}
-            placeholder="Enter your password"
-            name="password"
-            required
-          ></input>
-        </div>
+       
+        {inputs.map((item) => {
+            return (
+              <InputItem
+                title={item.title}
+                value={item.value}
+                placeholder={item.placeholder}
+                onChange={item.onChange}
+                tid={item.tid}
+                max={item.max}
+                type={item.type}
+                htmlFor={item.htmlFor}
+                name={item.name}
+              />
+            );
+          })}
 
         <div>
           <Button

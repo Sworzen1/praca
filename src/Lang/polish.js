@@ -28,6 +28,9 @@ const polish = {
     add:"DODAJ",
     submit:"Zatwierdź",
     recipe:"Przepis",
+    email:"Adres E-Mail",
+    password:"Hasło",
+    nickName:"Nazwa Użytkownika"
 
   };
   

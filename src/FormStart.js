@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { useCalories } from "./Calories";
+import InputItem from "./InputItem"
 
 const useStyles = makeStyles(theme => ({
   box1: {
@@ -21,44 +22,7 @@ const useStyles = makeStyles(theme => ({
       width:"30%"
     }
   },
-  formfield: {
-    marginBottom: "40px"
-  },
 
-  label: {
-    display: "block",
-    textTransform: "uppercase",
-    fontSize: ".9em",
-    color: "white",
-    "@media(min-width:1024px)":{
-      fontSize:"1.3em"
-    }
-  },
-  input: {
-    width: "85%",
-    backgroundColor: "transparent",
-    border: "none",
-    color: "white",
-    outline: "none",
-    borderBottom: "1px solid #f50057",
-    fontSize: "1em",
-    fontWeight: "300",
-    paddingBottom: "10px",
-    marginTop: "10px",
-    "&:-webkit-autofill": {
-      transition: "background-color 5000s ease-in-out 0s",
-      WebkitTextFillColor: "white",
-      WebkitBoxShadow: "0 0 0px 1000px transparent inset"
-    },
-    "@media(min-width:1024px)":{
-      fontSize:"1.2em"
-    }
-  },
-  xd:{
-    backgroundColor:"transparent",
-    width:"80px",
-    height:"45px"
-  }
 }));
 
 const Form = () => {
@@ -95,80 +59,74 @@ const Form = () => {
     setHeight(e.target.value);
   };
 
+  const inputs = [
+    {
+      title: "Nick name",
+      value: titleName,
+      placeholder: "Enter your nick name",
+      onChange: handleChange,
+      tid: "nickName",
+      max: "12",
+      type: "name",
+      htmlFor:"name",
+      name:"name"
+    },
+    {
+      title: "AGE",
+      value: titleAge,
+      placeholder: "Enter your nick age",
+      onChange: handleChangeAge,
+      tid: "age",
+      max: "100",
+      type: "number",
+      name:"number",
+      htmlFor:"number",
+    },
+    {
+      title: "WEIGHT",
+      value: titleWeight,
+      placeholder: "Enter your nick weight",
+      onChange: handleChangeWeight,
+      tid: "weight",
+      max: "300",
+      type: "number",
+      name:"number",
+      htmlFor:"number",
+    },
+    {
+      title: "HEIGHT",
+      value: titleHeight,
+      placeholder: "Enter your nick height",
+      onChange: handleChangeHeight,
+      tid: "height",
+      max: "250",
+      type: "number",
+      name:"number",
+      htmlFor:"number",
+    },
+  ];
+
   return (
     <div className={classes.box1}>
       <div className={classes.box2}>
-        {/* NAME */}
         <form onSubmit={handleSubmit}>
-          <div className={classes.formfield}>
-            <label className={classes.label} htmlFor="name">
-             NICK NAME
-            </label>
-            <input
-              onChange={handleChange}
-              value={titleName}
-              type="text"
-              id="name"
-              className={classes.input}
-              placeholder="Enter your nick name"
-              name="name"
-              required
-            ></input>
-          </div>
-          {/* AGE */}
-          <div className={classes.formfield}>
-            <label className={classes.label} htmlFor="name">
-              AGE
-            </label>
-            <input
-            onChange={handleChangeAge}
-            value={titleAge}
-              type="number"
-              min="1"
-              max="100"
-              id="age"
-              className={classes.input}
-              placeholder="Enter your age"
-              name="age"
-              required
-            ></input>
-          </div>
-          {/* WEIGHT */}
-          <div className={classes.formfield}>
-            <label className={classes.label} htmlFor="name">
-              WEIGHT
-            </label>
-            <input
-              onChange={handleChangeWeight}
-              value={titleWeight}
-              type="number"
-              min="1"
-              max="500"
-              id="weight"
-              className={classes.input}
-              placeholder="Enter your weight"
-              name="weight"
-              required
-            ></input>
-          </div>
-          {/* HEIGHT */}
-          <div className={classes.formfield}>
-            <label className={classes.label} htmlFor="name">
-              HEIGHT
-            </label>
-            <input
-              onChange={handleChangeHeight}
-              value={titleHeight}
-              type="number"
-              min="1"
-              max="250"
-              id="height"
-              className={classes.input}
-              placeholder="Enter your height"
-              name="height"
-              required
-            ></input>
-          </div>
+
+          {inputs.map((item) => {
+            return (
+              <InputItem
+                title={item.title}
+                value={item.value}
+                placeholder={item.placeholder}
+                onChange={item.onChange}
+                tid={item.tid}
+                max={item.max}
+                type={item.type}
+                htmlFor={item.htmlFor}
+                name={item.name}
+              />
+            );
+          })}
+
           <Button size="large" color="secondary" type="submit" >
             Submit
           </Button>

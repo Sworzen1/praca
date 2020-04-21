@@ -1,44 +1,68 @@
 [
     {
-        "title":"Placuszki",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 1
+        "title":"dtitle1",
+        "description": "ddescription1",
+        "descRecipe":"drecipe1",
+        "id":1,
+        "carbo": 51,
+        "protein": 18,
+        "fat":26,
+        "calories":525,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2019/04/244/b8a2df63b301b6fa80a7c02536b72d86.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"dtitle2",
+        "description": "ddescription2" ,
+        "descRecipe":"drecipe2",
+        "id": 2,
+        "carbo": 9,
+        "protein": 35,
+        "fat":12,
+        "calories":286,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/06/144/4b17b8b9a339fc00543d36135525f650.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"dtitle3",
+        "description":"ddescription3" ,
+        "descRecipe":"drecipe3",
+        "id": 3,
+        "carbo": 38,
+        "protein": 19,
+        "fat":11,
+        "calories":328,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/06/136/da9fc5440706a064aafaf8fa70b7d025.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"dtitle4",
+        "description": "ddescription4",
+        "descRecipe":"drecipe4",
+        "id": 4,
+        "carbo": 33,
+        "protein": 41,
+        "fat":32,
+        "calories":593,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/01/81/6cc8a4a5b4b7fa7ce53937c55b2a0ba3.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"dtitle5",
+        "description":"ddescription5",
+        "descRecipe":"drecipe5",
+        "id": 5,
+        "carbo": 97,
+        "protein": 51,
+        "fat":20,
+        "calories":761,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2017/01/9/19167339aa71c49424192f6094332937.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"dtitle6",
+        "description": "ddescription6",
+        "descRecipe":"drecipe6",
+        "id": 6,
+        "carbo": 21,
+        "protein": 3,
+        "fat":7,
+        "calories":137,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/09/165/bc7b50379434ea309a13c6e72511560e.jpeg"
     }
 ]

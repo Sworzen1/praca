@@ -12,7 +12,7 @@ export function LanguageProvider(props) {
   const initialState = () => {
     const myLanguage = localStorage.getItem('myLanguage')
     const obj = JSON.parse(myLanguage)
-    return obj || languageOptions[1]
+    return obj || languageOptions[0]
   }
   const initialDictionary = () => {
     const myLanguage = localStorage.getItem('myLanguage')

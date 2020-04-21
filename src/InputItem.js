@@ -44,7 +44,7 @@ const InputItem = (props) => {
   return (
     <div className={classes.formfield}>
       <label className={classes.label} htmlFor={props.htmlFor}>
-        <Text tid={props.tid}>props.title</Text>
+        <Text tid={props.tid}></Text>
       </label>
 
       <input

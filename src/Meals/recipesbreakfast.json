@@ -1,55 +1,69 @@
 [
     {
-        "title":"Placuszki",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
+        "title":"btitle1",
+        "description":"bdescription1",
+        "descRecipe":"brecipe1",
         "id": 1,
-        "carbo": 100,
-        "protein": 30,
-        "fat":5,
-        "calories":300,
-        "xd":"https://www.makroprzepisy.pl/images/app/recipes/2019/06/258/977b1207050ed6480e1c8ec6d2aae2b2.jpeg"
+        "carbo": 70,
+        "protein": 16,
+        "fat":11,
+        "calories":443,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2019/06/258/977b1207050ed6480e1c8ec6d2aae2b2.jpeg"
     },
     {
-        "title":"Jajecznica",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
+        "title":"btitle2",
+        "description":"bdescription2",
+        "descRecipe":"brecipe2",
         "id": 2,
-        "carbo": 100,
-        "protein": 30,
-        "fat":5,
-        "calories":300,
-        "xd":"https://2.bp.blogspot.com/-0z9rRWUwNF8/VeA-AJ3O32I/AAAAAAAAA3E/PgtpWKarLgo/s1600/j4.jpg"
+        "carbo": 26,
+        "protein": 8,
+        "fat":4,
+        "calories":153,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/07/148/dfbf50af35854b3aecee7f5066646204.jpeg"
 
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"btitle3",
+        "description":"bdescription3",
+        "descRecipe":"brecipe3",
+        "id": 3,
+        "carbo": 96,
+        "protein": 39,
+        "fat":12,
+        "calories":656,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2017/01/11/4040d7c8c7ad14be673e679396a77636.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"btitle4",
+        "description":"bdescription4",
+        "descRecipe":"brecipe4",
+        "id": 4,
+        "carbo": 14,
+        "protein": 34,
+        "fat":32,
+        "calories":470,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2019/01/214/0017203b62cce7964bffc543b923b2f4.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"btitle5",
+        "description":"bdescription5",
+        "descRecipe":"brecipe5",
+        "id": 5,
+        "carbo": 42,
+        "protein": 30,
+        "fat":8,
+        "calories":370,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/04/115/12f7c4eecf61dd9d57dd2a3dc0646bac.jpeg"
     },
     {
-        "title":"Gowno",
-        "description": "Pyszne placki owsiane z dodatkiem banana, bez cukru idealny pomysl na smaczne śniadanie",
-        "titleRecipe":"Cos tu",
-        "descRecipe":"Pyszne placki owsiane z dodatkiem banana, cukru idealny pomysl na smaczne śniadanie",
-        "id": 2
+        "title":"btitle6",
+        "description":"bdescription6",
+        "descRecipe":"brecipe6",
+        "id": 6,
+        "carbo": 39,
+        "protein": 33,
+        "fat":26,
+        "calories":515,
+        "image":"https://www.makroprzepisy.pl/images/app/recipes/2018/07/155/6b48872f7d7ef24a8acd040d9eaac0c6.jpeg"
     }
 ]

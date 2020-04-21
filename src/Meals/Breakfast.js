@@ -1,5 +1,5 @@
 import React from "react";
-import Card1 from "./Card1";
+import FoodCard from "./FoodCard";
 import { makeStyles } from "@material-ui/core/styles";
 import recipesbreakfast from "./recipesbreakfast.json";
 
@@ -35,8 +35,8 @@ const Breakfast = () => {
       <div className={classes.main2}>
       {recipesbreakfast.map(item=>{
         return (
-          <Card1 title={item.title} description={item.description} titleRecipe={item.titleRecipe} 
-          descRecipe={item.descRecipe} carbo={item.carbo} protein={item.protein} fat={item.fat} calories={item.calories} xd={item.xd}/>
+          <FoodCard title={item.title} description={item.description} titleRecipe={item.titleRecipe} 
+          descRecipe={item.descRecipe} carbo={item.carbo} protein={item.protein} fat={item.fat} calories={item.calories} image={item.image}/>
         )
       })}
       </div>

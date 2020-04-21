@@ -1,5 +1,6 @@
-import polish from './polish';
 import english from './english';
+import polish from './polish';
+
 
 
 export const dictionaryList = {

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Drawer from "./Drawer";
+import DrawerRWD from "./DrawerRWD";
 import Profile from "./Profile";
 import Foods from "./Foods";
 import Contact from "./Contact";
@@ -16,10 +16,9 @@ import Form from "./Form";
 import FormStart from "./FormStart";
 import MyFoods from "./MyFoods"
 import { LanguageProvider } from "./Lang/Language";
-import Drawertest from "./Drawertest"
 
 const App = () => {
-  const { login, darkmode } = useCalories();
+  const { login } = useCalories();
 
   if (login == 0) {
     return <SingIn />;
@@ -34,8 +33,8 @@ const App = () => {
     <LanguageProvider>
     <Router>
       <div className={"app"}>
-        <Drawertest />
-        <main className={darkmode ? "main" : "mainLight"}>
+        <DrawerRWD />
+        <main className={"main"}>
           <Switch>
             <Route path="/MyFoods">
               <MyFoods />

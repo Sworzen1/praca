@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react'
 import { useCalories } from "../Calories";
 import { makeStyles } from "@material-ui/core/styles";
 import {Text} from "../Lang/Language";
+import InputFood from "./InputFood";
 
 
 const useStyles = makeStyles({
@@ -52,21 +53,7 @@ const useStyles = makeStyles({
     }
 
   },
-  input2:{
-    width: "90px",
-    backgroundColor: "transparent",
-    border: "none",
-    color: "white",
-    outline: "none",
-    border: "2px solid #f50057",
-    fontSize: "1em",
-    fontWeight: "300",
-    padding: "10px",
-    borderRadius: 35,
-    marginTop:10,
-   
 
-  },
   button:{
     width:"80px",
     height:"50px",
@@ -90,7 +77,7 @@ const useStyles = makeStyles({
   
 });
 
-const FoodForm = () => {
+const FoodForm = (props) => {
   const { addTask, editTask, editItem } = useCalories();
   const [title, setTitle] = useState('')
   const [calories2, setCalories] = useState('')
@@ -157,6 +144,28 @@ const FoodForm = () => {
    }
   })
 
+const inputs = [
+  {
+    placeholder:calo,
+    value:calories2,
+    onChange:handleCalories
+  },
+  {
+    placeholder:carbo,
+    value:carbos,
+    onChange:handleCarbo
+  },
+  {
+    placeholder:proteins1,
+    value:proteins,
+    onChange:handleProteins
+  },
+  {
+    placeholder:fats1,
+    value:fats2,
+    onChange:handleFats,
+  }
+]
 
   return (
    
@@ -171,48 +180,19 @@ const FoodForm = () => {
         className={classes.input}
       />
       <div className={classes.form2}>
-            <input
-        type="number"
-        placeholder={calo}
-        value={calories2}
-        onChange={handleCalories}
-        required
-        className={classes.input2}
-        min="1"
-        max="2000"
-      />
-            <input
-        type="number"
-        placeholder={carbo}
-        value={carbos}
-        onChange={handleCarbo}
-        required
-        className={classes.input2}
-        min="1"
-        max="1000"
-      />
-            <input
-        type="number"
-        placeholder={proteins1}
-        value={proteins}
-        onChange={handleProteins}
-        required
-        className={classes.input2}
-        min="1"
-        max="1000"
-      />
-            <input
-        type="number"
-        placeholder={fats1}
-        value={fats2}
-        onChange={handleFats}
-        required
-        className={classes.input2}
-        min="1"
-        max="1000"
-      />
-      
+
+      {inputs.map((item)=> {
+  return(
+    <InputFood
+    placeholder={item.placeholder}
+    value={item.value}
+    onChange={item.onChange}
+    />
+  )
+})}
         </div>
+
+
         <div className={classes.buttons}>
         <button type="submit" className={classes.button}>
          <Text tid="add">ADD</Text>
@@ -223,3 +203,7 @@ const FoodForm = () => {
 }
 
 export default FoodForm
+
+
+
+

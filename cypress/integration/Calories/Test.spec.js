@@ -158,7 +158,7 @@ describe("Calories", function () {
       cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("4")
     })
   })
-context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper ", () => {
+context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", () => {
   it("EatBreakfast", () => {
     cy.get(".MuiButton-label").click();
     cy.visit("http://localhost:3000/breakfast")
@@ -233,6 +233,14 @@ context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper ", () => {
     cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("180")
     cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("45")
     cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("40")
+  })
+  it("OpenRecipe", () => {
+    cy.get(".MuiButton-label").click();
+    cy.visit("http://localhost:3000/supper")
+    cy.get(':nth-child(1) > .MuiPaper-root > .MuiCardActions-root > :nth-child(2) > .MuiButton-label').click()
+    cy.get('.MuiDialogContent-root').should("be.visible")
+    cy.get('#customized-dialog-title > .MuiButtonBase-root > .MuiIconButton-label > .MuiSvgIcon-root > path').click()
+    cy.get('.MuiDialogContent-root').should("not.be.visible")
   })
 })
 });

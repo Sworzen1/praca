@@ -68,10 +68,22 @@ line:{
 
 }));
 
+
 const BMI = () => {
-    
-    const {bmi, TextBMI} = useCalories();
-    
+    var BMItext = "NaN"
+    const {bmi} = useCalories();
+
+    if (bmi < 19) {
+      BMItext = "Underweight";
+    } else if (bmi <= 25) {
+      BMItext = "Normal";
+    } else if (bmi <= 30) {
+     BMItext = "Overweight";
+    } else if (bmi > 30) {
+      BMItext = "Obese";
+    }else {
+      BMItext = "NaN"
+    }
    
     const classes = useStyles();
     return (
@@ -82,7 +94,9 @@ const BMI = () => {
        <span className={classes.h1}>BMI</span>
         <span className={classes.h2}>
         <h2 >{parseInt(bmi)}</h2>
-        <h4 className={classes.line}>{TextBMI}</h4>
+        <h4 className={classes.line}>
+      <Text tid={BMItext}></Text>
+</h4>
         </span>
       </div>
              

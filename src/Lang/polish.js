@@ -103,9 +103,29 @@ const polish = {
     snrecipe4:"Wsypać do garnka 30g płatków owsianych, wlać 80g wody i 80g mleka, dodać płaską łyżeczkę masła oraz ekstraktu wanilinowego, łyżeczkę syropu klonowego i szczyptę soli.Gotować, aż zacznie robić się kremowa. Owsiankę przelać do miseczek. Na wierzchu ułożyć 50g truskawek,połowę banana i zetrzeć na grubych oczkach 2 kostki gorzkiej czekolady. Posypać szczyptą cynamonu.",
     snrecipe5:"200g banana, pokroić w plasterki i zamrozić. Do kielicha blendera wrzucić mrożone banany, wlać  60g mleka, dodać 150g truskawek. Dokładnie zblendować na gładką i kremową konsystencję. Przelać do miseczek. Na wierzchu ułożyć 40g pokrojonych truskawek, posypać ekspandowanymi ziarnami prosa i dodać listki mięty.",
     snrecipe6:"2 galaretki rozpuścić w 500 g gorącej wody. Ostudzić. Dwa serki waniliowe Danio przełożyć do miski, wlać galaretkę i dokładnie zmiksować do połączenia. Płynną masę przelać do dużych kieliszków/pucharków. Do masy wrzucić kawałki truskawek około 80g. Wstawić do lodówki do stężenia. Na wierzch: 1 galaretkę rozpuścić w 400 g gorącej wody. Ostudzić. Na zastygnięte serniczki ułożyć kawałki truskawek około 120g, zalać je galaretką. Całość wstawić do lodówki do stężenia. Z przepisu wyjdzie 5 porcji, wartość kaloryczna podana dla 1.",
-
-
-  
-  };
+  sutitle1:"Placki z cukini",
+  sutitle2:"Sałatka z winogronami",
+  sutitle3:"Placki z bananem",
+  sutitle4:"Owsianka z owocami liofilizowanymi",
+  sutitle5:"Zielony koktajl",
+  sutitle6:"Koktajl jogurtowy",
+  sudescription1:"Chrupiące placki z cukini z dodatkiem cebuli",
+  sudescription2:"Sałatka z winogronami, serem brie i słonecznikiem",
+  sudescription3:"Smaczne placki jogurtowe z bananem",
+  sudescription4:"Pożywna owsianka z owocami liofilizowanymi",
+  sudescription5:"Koktajl z jarmużu, jabłka, gruszki i truskawek",
+  sudescription6:"Koktajl jogurtowy z dodatkiem mango i arbuza",
+  surecipe1:"Zetrzeć na tarce z grubymi oczkami 2 cukinie i odcisnąć wodę. Połowę małej cebuli pokroić w drobną kostkę. W misce wymieszać 20g mąki z solą i pieprzem. Do miseczki wbić jajko, roztrzepać trzepaczką i wlać do mąki. Całość wymieszać na gładką, jednolitą masę. Dodać łyżkę mleka i ponownie wymieszać trzepaczką. Do masy dodać cebulę i odciśniętą cukinię. Wymieszać. Na patelni rozgrzać olej, nakładać po łyżce masy na jednego placka. Zrumienić z obu stron.",
+  surecipe2:"Pół garści rukoli,garść roszponki i kilka winogron umyć, osuszyć. Przygotować sos - wymieszać łyżkę oliwy, pół łyżeczki octu balsamicznego i miodu, sok z cytryny. W głębokich talerzach ułożyć rukolę, roszponkę, winogrona pokrojone na połówki, 25g pokrojonego sera brie i kilka pestek słonecznika. Sałatkę posypać solą, pieprzem i polać sosem.",
+  surecipe3:"Do miski wrzucić połowę obranego banana i rozgnieść widelcem. Następnie dodać 90g jogurtu naturalnego, jajko i cynamon - wymieszać. Dodać 40g mąki i ponownie wymieszać. Smażyć na rozgrzanej patelni z dodatkiem niewielkiej ilości oleju. Nakładać po łyżce masy na jednego placuszka, zrumienić z obu stron.",
+  surecipe4:"40g płatków zalać 100g mleka, zagotować. Ciągle mieszając, gotować przez ok. 3 minuty. Przełożyć do miseczki. Dodać łyżeczkę miodu, wymieszać. Wierzch posypać garścią mieszanki owoców liofilizowanych, suszonymi jagodami goji i wiórkami kokosowymi.",
+  surecipe5:"Połowę jabłka i gruszki obrać, wydrążyć środek. 15g jarmużu umyć, podzielić na kawałki. Dodać 75g truskawek. Wszystkie składniki dodać do kielicha blendera, dolać 50g wody i dokładnie zmiksować. Koktajl wypić bezpośrednio po przyrządzeniu.",
+  surecipe6:"Zblendować 110g obranego mango. Zblendować 110g arbuza bez pestek. Do szklanki nałożyć 100g jogurtu naturalnego, mus z mango i zmiksowanego arbuza.",
+  Underweight: "Niedowaga",
+  Normal:"W normie",
+  Overweight:"Nadwaga",
+  Obese:"Otyłość",
+  NaN:"NaN"
+};
   
   export default polish;

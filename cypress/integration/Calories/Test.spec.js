@@ -81,7 +81,7 @@ describe("Calories", function () {
       cy.get(":nth-child(3) > .makeStyles-input-8").type("1");
       cy.get(":nth-child(4) > .makeStyles-input-8").type("1");
       cy.get(".MuiButton-label").click()
-      cy.get('.makeStyles-h2-180 > h2').contains("Bartek")
+      cy.get('.makeStyles-h2-179 > h2').contains("Bartek")
 
      
       })
@@ -104,11 +104,11 @@ describe("Calories", function () {
          cy.get(":nth-child(3) > .makeStyles-input-134").type("170");
          cy.get('form > .MuiButtonBase-root > .MuiButton-label').click()    
          cy.visit("http://localhost:3000/")
-            cy.get(':nth-child(1) > .makeStyles-h2-140').contains("23")
-            cy.get('.makeStyles-h2-140 > h1').contains("70")
-            cy.get('.makeStyles-h2-140 > h2').contains("170")
-            cy.get('.makeStyles-line-145').contains("Normal")
-            cy.get('.makeStyles-h2-144 > h2').contains("24")
+            cy.get(':nth-child(1) > .makeStyles-h2-139').contains("23")
+            cy.get('.makeStyles-h2-139 > h1').contains("70")
+            cy.get(':nth-child(3) > .makeStyles-h2-139 > h2').contains("170")
+            cy.get('.makeStyles-line-144').contains("Normal")
+            cy.get('.makeStyles-h2-143 > h2').contains("24")
         })
   })
 
@@ -116,9 +116,9 @@ describe("Calories", function () {
     it("LanguageSelector", () => {
       cy.get(".MuiButton-label").click();
       cy.get('.MuiPaper-root > .makeStyles-select-120').select("Polish")
-      cy.get(':nth-child(1) > .makeStyles-h1-157').contains("Wiek")
+      cy.get(':nth-child(1) > .makeStyles-h1-156').contains("Wiek")
       cy.get('.MuiPaper-root > .makeStyles-select-120').select("English")
-      cy.get(':nth-child(1) > .makeStyles-h1-157').contains("Age")
+      cy.get(':nth-child(1) > .makeStyles-h1-156').contains("Age")
       cy.reload()
       cy.get('.MuiPaper-root > .makeStyles-select-73')
       cy.get("option:first").should("be.selected").and("have.value","english")
@@ -152,10 +152,10 @@ describe("Calories", function () {
       cy.get('.makeStyles-button-136').click()
       cy.get(':nth-child(1) > .MuiButton-label').click()
       cy.visit("http://localhost:3000/")
-      cy.get('.makeStyles-text-148').contains("1")
-      cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("2")
-      cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("3")
-      cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("4")
+      cy.get('.makeStyles-text-147').contains("1")
+      cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-174').contains("2")
+      cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-174').contains("3")
+      cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-174').contains("4")
     })
   })
 context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", () => {
@@ -169,10 +169,10 @@ context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", (
     cy.get(':nth-child(5) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.get(':nth-child(6) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.visit("http://localhost:3000/")
-    cy.get('.makeStyles-text-148').contains("2607")
-    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("287")
-    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("160")
-    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("93")
+    cy.get('.makeStyles-text-147').contains("2607")
+    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-174').contains("287")
+    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-174').contains("160")
+    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-174').contains("93")
   })
   it("EatLunch", () => {
     cy.get(".MuiButton-label").click();
@@ -184,10 +184,10 @@ context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", (
     cy.get(':nth-child(5) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.get(':nth-child(6) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.visit("http://localhost:3000/")
-    cy.get('.makeStyles-text-148').contains("1944")
-    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("151")
-    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("110")
-    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("101")
+    cy.get('.makeStyles-text-147').contains("1944")
+    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-174').contains("151")
+    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-174').contains("110")
+    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-174').contains("101")
   })
   it("EatDinner", () => {
     cy.get(".MuiButton-label").click();
@@ -199,10 +199,10 @@ context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", (
     cy.get(':nth-child(5) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.get(':nth-child(6) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.visit("http://localhost:3000/")
-    cy.get('.makeStyles-text-148').contains("2630")
-    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("249")
-    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("167")
-    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("108")
+    cy.get('.makeStyles-text-147').contains("2630")
+    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-174').contains("249")
+    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-174').contains("167")
+    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-174').contains("108")
   })
   it("EatSnack", () => {
     cy.get(".MuiButton-label").click();
@@ -214,10 +214,10 @@ context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", (
     cy.get(':nth-child(5) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.get(':nth-child(6) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.visit("http://localhost:3000/")
-    cy.get('.makeStyles-text-148').contains("1553")
-    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("260")
-    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("37")
-    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("47")
+    cy.get('.makeStyles-text-147').contains("1553")
+    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-174').contains("260")
+    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-174').contains("37")
+    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-174').contains("47")
   })
   it("EatSupper", () => {
     cy.get(".MuiButton-label").click();
@@ -229,10 +229,10 @@ context("EatBreakfast, EatLunch, EatDinner, EatSnack, EatSupper, OpenRecipe ", (
     cy.get(':nth-child(5) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.get(':nth-child(6) > .MuiPaper-root > .MuiCardActions-root > :nth-child(1) > .MuiButton-label').click()
     cy.visit("http://localhost:3000/")
-    cy.get('.makeStyles-text-148').contains("1264")
-    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-175').contains("180")
-    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-175').contains("45")
-    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-175').contains("40")
+    cy.get('.makeStyles-text-147').contains("1264")
+    cy.get(':nth-child(1) > :nth-child(2) > .makeStyles-output-174').contains("180")
+    cy.get(':nth-child(2) > :nth-child(2) > .makeStyles-output-174').contains("45")
+    cy.get(':nth-child(3) > :nth-child(2) > .makeStyles-output-174').contains("40")
   })
   it("OpenRecipe", () => {
     cy.get(".MuiButton-label").click();

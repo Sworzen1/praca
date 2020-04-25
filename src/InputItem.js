@@ -57,6 +57,7 @@ const InputItem = (props) => {
         placeholder={props.placeholder}
         name={props.name}
         required
+        key={props.title}
       ></input>
     </div>
   );

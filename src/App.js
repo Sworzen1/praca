@@ -21,12 +21,12 @@ const App = () => {
   const { login } = useCalories();
 
   if (login == 0) {
-    return <SingIn />;
+    return <Router><SingIn /></Router>;
   } else if (login == 1) {
     return <SingUp />;
   }
   else if (login==3){
-    return <FormStart/>;
+    return <Router><FormStart/></Router>;
   }
 
   return (

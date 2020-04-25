@@ -43,7 +43,7 @@ const z = useContext(LanguageContext);
     <nav className={classes.menu}>
       {menu.map(link => {
         return (
-          <MenuItem key={link.key} title={link.title} pathname={link.to} />
+          <MenuItem key={link.to} title={link.title} pathname={link.to} />
         );
       })}
       

@@ -1,18 +1,18 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
-import uuid from 'uuid'
+import uuid from "uuid";
 
-
- const CaloriesContext = createContext();
+const CaloriesContext = createContext();
 
 const { Provider } = CaloriesContext;
 
-const CaloriesProvider = props => {
+const CaloriesProvider = (props) => {
   const initialName = localStorage.getItem("name");
   const initialAge = localStorage.getItem("age");
   const initialWeight = localStorage.getItem("weight");
   const initialHeight = localStorage.getItem("height");
-  const initialLogin = localStorage.getItem("login");
-  const initialTask = JSON.parse(localStorage.getItem('tasks')) || []
+  const initialLogin = JSON.parse(localStorage.getItem("login")) || 0;
+  const initialTask = JSON.parse(localStorage.getItem("tasks")) || [];
+  const initialDate = localStorage.getItem("date") || new Date().toDateString();
 
   const [login, setLogin] = useState(initialLogin);
   const [carbo, setCarbo] = useState(0);
@@ -24,100 +24,98 @@ const CaloriesProvider = props => {
   const [age, setAge] = useState(initialAge);
   const [weight, setWeight] = useState(initialWeight);
   const [height, setHeight] = useState(initialHeight);
-  const [car, setCar] = useState(0)
-  const [pro, setPro] = useState(0)
-  const [fats, setFats] = useState(0)
-  const [cal, setCal] = useState(0)
-  const [y, setY] = useState(0)
-  const [z, setZ] = useState(0)
-  const [v, setV] = useState(0)
-  const [x , setX]= useState(0)
-  const [bmi, setBmi] = useState(0)
-  const [TextBMI, SetTextBMI] = useState(0)
-  const [tasks, setTasks] = useState(initialTask)
-
-
-  
+  const [car, setCar] = useState(0);
+  const [pro, setPro] = useState(0);
+  const [fats, setFats] = useState(0);
+  const [cal, setCal] = useState(0);
+  const [y, setY] = useState(0);
+  const [z, setZ] = useState(0);
+  const [v, setV] = useState(0);
+  const [x, setX] = useState(0);
+  const [bmi, setBmi] = useState(0);
+  const [tasks, setTasks] = useState(initialTask);
+  const [date, setDate] = useState(initialDate);
 
   useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks))
-  }, [tasks])
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   // Add tasks
-  const addTask = (title,  calories2, carbos, proteins, fats2) => {
-    setTasks([...tasks, { title, calories2, carbos, proteins, fats2, id: uuid() }])
-  }
+  const addTask = (title, calories2, carbos, proteins, fats2) => {
+    setTasks([
+      ...tasks,
+      { title, calories2, carbos, proteins, fats2, id: uuid() },
+    ]);
+  };
 
   // Remove tasks
-  const removeTask = id => {
-    setTasks(tasks.filter(task => task.id !== id))
-  }
+  const removeTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id));
+  };
 
-  useEffect(()=>{
-    setCar(((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.5) / 4)
-    setPro(((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.3) / 4)
-    setFats(((370 + (13.7*weight) + (5*height) - (6.76*age)) * 0.20) / 9)
-    setCal( (370 + (13.7*weight) + (5*height) - (6.76*age)))
-  })
+  useEffect(() => {
+    setCar(((370 + 13.7 * weight + 5 * height - 6.76 * age) * 0.5) / 4);
+    setPro(((370 + 13.7 * weight + 5 * height - 6.76 * age) * 0.3) / 4);
+    setFats(((370 + 13.7 * weight + 5 * height - 6.76 * age) * 0.2) / 9);
+    setCal(370 + 13.7 * weight + 5 * height - 6.76 * age);
+  });
 
-  useEffect(()=>{
-    setBmi (weight/((height*height)/10000))
-    
-    if(bmi<19){
-      SetTextBMI("Underweight")
-    }
-    else if(bmi<=25){
-      SetTextBMI('Normal')
-    }
-    else if(bmi <= 30){
-      SetTextBMI('Overweight')
-    }
-    else if (bmi>30){
-      SetTextBMI('Obese')
-    }
-    else {
-     SetTextBMI("NaN")
-    }
-  })
-  
-  useEffect(()=>{
-      setX(carbo * 100 / car)
-      if(carbo>car){
-        setX(100)
-      }
+  useEffect(() => {
+    setBmi(weight / ((height * height) / 10000));
+  });
 
-      setY(protein * 100 / pro)
-      if(protein>pro){
-        setY(100)
-      }
+  useEffect(() => {
+    setX((carbo * 100) / car);
+    if (carbo > car) {
+      setX(100);
+    }
 
-      setZ(fat * 100 / fats)
-      if(fat>fats){
-        setZ(100)
-      }
+    setY((protein * 100) / pro);
+    if (protein > pro) {
+      setY(100);
+    }
 
-      setV(calories * 100 / cal)
-      if(calories>cal){
-        setV(100)
-      }
-    
-  })
-  
-  const addName = titleName => {
+    setZ((fat * 100) / fats);
+    if (fat > fats) {
+      setZ(100);
+    }
+
+    setV((calories * 100) / cal);
+    if (calories > cal) {
+      setV(100);
+    }
+  });
+
+  const addName = (titleName) => {
     setName(titleName);
   };
 
-  const addAge = titleAge => {
+  const addAge = (titleAge) => {
     setAge(titleAge);
   };
 
-  const addWeight = titleWeight => {
+  const addWeight = (titleWeight) => {
     setWeight(titleWeight);
   };
 
-  const addHeight = titleHeight => {
+  const addHeight = (titleHeight) => {
     setHeight(titleHeight);
   };
+
+  useEffect(() => {
+    localStorage.setItem("date", date);
+    if (localStorage.date !== new Date().toDateString()) {
+      setDate(new Date().toDateString());
+      setCarbo(0);
+      localStorage.setItem("carbo", carbo);
+      setProtein(0);
+      localStorage.setItem("protein", protein);
+      setFat(0);
+      localStorage.setItem("fat", fat);
+      setCalories(0);
+      localStorage.setItem("calories", calories);
+    }
+  }, [date]);
 
   useEffect(() => {
     localStorage.setItem("login", login);
@@ -141,27 +139,27 @@ const CaloriesProvider = props => {
 
   useEffect(() => {
     const carboFromMemory = +localStorage.getItem("carbo");
-    setCarbo((carboFromMemory));
+    setCarbo(carboFromMemory);
   }, []);
 
   useEffect(() => {
     const proteinFromMemory = +localStorage.getItem("protein");
-    setProtein((proteinFromMemory));
+    setProtein(proteinFromMemory);
   }, []);
 
   useEffect(() => {
     const fatFromMemory = +localStorage.getItem("fat");
-    setFat((fatFromMemory));
+    setFat(fatFromMemory);
   }, []);
 
   useEffect(() => {
     const caloriesFromMemory = +localStorage.getItem("calories");
-    setCalories((caloriesFromMemory));
+    setCalories(caloriesFromMemory);
   }, []);
-  
+
   const addCalories = (carboToAdd, proteinToAdd, fatToAdd, caloriesToAdd) => {
     setCarbo(carbo + carboToAdd);
-    localStorage.setItem("carbo",carbo + carboToAdd);
+    localStorage.setItem("carbo", carbo + carboToAdd);
 
     setProtein(protein + proteinToAdd);
     localStorage.setItem("protein", protein + proteinToAdd);
@@ -173,9 +171,9 @@ const CaloriesProvider = props => {
     localStorage.setItem("calories", calories + caloriesToAdd);
   };
 
-  const addProgres = ( carbos, proteins, fats2,calories2) => {
+  const addProgres = (carbos, proteins, fats2, calories2) => {
     setCarbo(carbo + carbos);
-    localStorage.setItem("carbo",carbo + carbos);
+    localStorage.setItem("carbo", carbo + carbos);
 
     setProtein(protein + proteins);
     localStorage.setItem("protein", protein + proteins);
@@ -198,13 +196,13 @@ const CaloriesProvider = props => {
   const Register = () => {
     setLogin(1);
   };
-  
+
   const Already = () => {
     setLogin(0);
   };
   const GoForm = () => {
     setLogin(3);
-  }
+  };
 
   return (
     <Provider
@@ -238,11 +236,11 @@ const CaloriesProvider = props => {
         z,
         v,
         bmi,
-        TextBMI,
         addProgres,
         tasks,
         addTask,
         removeTask,
+        date,
       }}
     >
       {props.children}

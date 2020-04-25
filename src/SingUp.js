@@ -94,6 +94,7 @@ const SingUp = () => {
             title={item.title}
             max={item.max}
             tid={item.tid}
+            key={item.title}
             />
           )
         })}

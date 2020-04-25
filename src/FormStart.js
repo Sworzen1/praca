@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import { useCalories } from "./Calories";
-import InputItem from "./InputItem"
+import InputItem from "./InputItem";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   box1: {
@@ -22,6 +23,9 @@ const useStyles = makeStyles(theme => ({
       width:"30%"
     }
   },
+  button:{
+    textDecoration:"none"
+  }
 
 }));
 
@@ -123,6 +127,7 @@ const Form = () => {
                 type={item.type}
                 htmlFor={item.htmlFor}
                 name={item.name}
+                key={item.title}
               />
             );
           })}
@@ -130,6 +135,7 @@ const Form = () => {
           <Button size="large" color="secondary" type="submit" >
             Submit
           </Button>
+
         </form>
       </div>
     </div>

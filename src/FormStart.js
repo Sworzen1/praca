@@ -5,40 +5,39 @@ import { useCalories } from "./Calories";
 import InputItem from "./InputItem";
 import { Link } from "react-router-dom";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   box1: {
     width: "100%",
     height: "100vh",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#17161a"
+    backgroundColor: "#17161a",
   },
   box2: {
     backgroundColor: "rgba(15,15,15,.8)",
     boxShadow: "15px 15px 5px 0px rgba(0,0,0,0.3)",
     padding: "30px",
     color: "white",
-    "@media(min-width:1024px)":{
-      width:"30%"
-    }
+    "@media(min-width:1024px)": {
+      width: "30%",
+    },
   },
-  button:{
-    textDecoration:"none"
-  }
-
+  button: {
+    textDecoration: "none",
+  },
 }));
 
 const Form = () => {
   const { addName, addAge, addWeight, addHeight, LoggedIn } = useCalories();
-  const [titleName, setTitle] = useState("")
-  const [titleAge,setAge] = useState("");
-  const [titleWeight,setWeight] = useState("");
-  const [titleHeight,setHeight] = useState("");
+  const [titleName, setTitle] = useState("");
+  const [titleAge, setAge] = useState("");
+  const [titleWeight, setWeight] = useState("");
+  const [titleHeight, setHeight] = useState("");
   const classes = useStyles();
 
-  const handleSubmit = e => {
-    e.preventDefault()
+  const handleSubmit = (e) => {
+    e.preventDefault();
     addName(titleName);
     setTitle("");
     addAge(titleAge);
@@ -47,19 +46,19 @@ const Form = () => {
     setWeight("");
     addHeight(titleHeight);
     setHeight("");
-    LoggedIn()
+    LoggedIn();
   };
-  const handleChange = e => {
+  const handleChange = (e) => {
     setTitle(e.target.value);
   };
 
-  const handleChangeAge = e => {
+  const handleChangeAge = (e) => {
     setAge(e.target.value);
   };
-  const handleChangeWeight = e => {
+  const handleChangeWeight = (e) => {
     setWeight(e.target.value);
   };
-  const handleChangeHeight = e => {
+  const handleChangeHeight = (e) => {
     setHeight(e.target.value);
   };
 
@@ -72,8 +71,8 @@ const Form = () => {
       tid: "nickName",
       max: "12",
       type: "name",
-      htmlFor:"name",
-      name:"name"
+      htmlFor: "name",
+      name: "name",
     },
     {
       title: "AGE",
@@ -83,8 +82,8 @@ const Form = () => {
       tid: "age",
       max: "100",
       type: "number",
-      name:"number",
-      htmlFor:"number",
+      name: "number",
+      htmlFor: "number",
     },
     {
       title: "WEIGHT",
@@ -94,8 +93,8 @@ const Form = () => {
       tid: "weight",
       max: "300",
       type: "number",
-      name:"number",
-      htmlFor:"number",
+      name: "number",
+      htmlFor: "number",
     },
     {
       title: "HEIGHT",
@@ -105,8 +104,8 @@ const Form = () => {
       tid: "height",
       max: "250",
       type: "number",
-      name:"number",
-      htmlFor:"number",
+      name: "number",
+      htmlFor: "number",
     },
   ];
 
@@ -114,7 +113,6 @@ const Form = () => {
     <div className={classes.box1}>
       <div className={classes.box2}>
         <form onSubmit={handleSubmit}>
-
           {inputs.map((item) => {
             return (
               <InputItem
@@ -132,10 +130,9 @@ const Form = () => {
             );
           })}
 
-          <Button size="large" color="secondary" type="submit" >
+          <Button size="large" color="secondary" type="submit">
             Submit
           </Button>
-
         </form>
       </div>
     </div>

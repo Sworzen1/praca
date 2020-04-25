@@ -1,34 +1,34 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Text} from "../Lang/Language";
-import {useCalories} from "../Calories"
+import { Text } from "../Lang/Language";
+import { useCalories } from "../Calories";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   main: {
     display: "flex",
-    position:"absolute",
+    position: "absolute",
     width: "100vw",
-   top:140,
-    color:"white",
-    '@media(min-width:768px)':{
-      top:80,
-      width:"50vw",
-      right:"0"
+    top: 140,
+    color: "white",
+    "@media(min-width:768px)": {
+      top: 80,
+      width: "50vw",
+      right: "0",
       // justifyContent:"center",
       // alignItems:"center",
       // marginLeft:"25%"
-    }
+    },
   },
   text: {
     border: "2px solid black ",
     width: "100px",
     height: "50px",
-    margin:"auto",
+    margin: "auto",
     borderRadius: 10,
     "@media(min-width:1024px)": {
-      width:"120px",
-      height:"70px",
-      fontSize:"20px"
+      width: "120px",
+      height: "70px",
+      fontSize: "20px",
     },
   },
   text1: {
@@ -38,8 +38,8 @@ const useStyles = makeStyles(theme => ({
     margin: "10px",
     borderRadius: 10,
     "@media(min-width:1024px)": {
-      width:"120px",
-      height:"85px"
+      width: "120px",
+      height: "85px",
     },
   },
   h1: {
@@ -51,49 +51,55 @@ const useStyles = makeStyles(theme => ({
     background: "#17161a",
     zIndex: 1,
     textAlign: "center",
-    fontSize:15,
+    fontSize: 15,
     "@media(min-width:1024px)": {
-      fontSize:"18px",
-      marginTop:"-13px",
-      marginLeft:"14px",
-      width:"65px"
+      fontSize: "18px",
+      marginTop: "-13px",
+      marginLeft: "14px",
+      width: "65px",
     },
   },
   h2: {
-    display:"flex",
-    alignItems:"center",
-    justifyContent:"center",
-    height:"inherit"
-  }
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: "inherit",
+  },
 }));
 
 const Specyfies = () => {
-  const {age, weight, height} = useCalories();
+  const { age, weight, height } = useCalories();
   const classes = useStyles();
 
   return (
     <div className={classes.main}>
       <div className={classes.text}>
-       <span className={classes.h1}> <Text tid="age">Age</Text></span>
+        <span className={classes.h1}>
+          {" "}
+          <Text tid="age">Age</Text>
+        </span>
         <span className={classes.h2}>
           <h2>{age}</h2>
         </span>
       </div>
 
       <div className={classes.text1}>
-        <span className={classes.h1}><Text tid="weight">Weight</Text></span>
+        <span className={classes.h1}>
+          <Text tid="weight">Weight</Text>
+        </span>
         <span className={classes.h2}>
           <h1>{weight}</h1>
         </span>
       </div>
 
       <div className={classes.text}>
-        <span className={classes.h1}><Text tid="height">Height</Text></span>
+        <span className={classes.h1}>
+          <Text tid="height">Height</Text>
+        </span>
         <span className={classes.h2}>
           <h2>{height}</h2>
         </span>
       </div>
-      
     </div>
   );
 };

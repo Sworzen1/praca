@@ -14,62 +14,69 @@ import SingIn from "./SingIn";
 import SingUp from "./SingUp";
 import Form from "./Form";
 import FormStart from "./FormStart";
-import MyFoods from "./MyFoods"
+import MyFoods from "./MyFoods";
 import { LanguageProvider } from "./Lang/Language";
 
 const App = () => {
   const { login } = useCalories();
 
   if (login == 0) {
-    return <Router><SingIn /></Router>;
+    return (
+      <Router>
+        <SingIn />
+      </Router>
+    );
   } else if (login == 1) {
     return <SingUp />;
-  }
-  else if (login==3){
-    return <Router><FormStart/></Router>;
+  } else if (login == 3) {
+    return (
+      <Router>
+        <FormStart />
+      </Router>
+    );
   }
 
   return (
     <LanguageProvider>
-    <Router>
-      <div className={"app"}>
-        <DrawerRWD />
-        <main className={"main"}>
-          <Switch>
-            <Route path="/MyFoods">
-              <MyFoods />
-            </Route>
-          <Route path="/Form">
-              <Form />
-            </Route>
-            <Route path="/supper">
-              <Supper />
-            </Route>
-            <Route path="/snack">
-              <Snack />
-            </Route>
-            <Route path="/dinner">
-              <Dinner />
-            </Route>
-            <Route path="/lunch">
-              <Lunch />
-            </Route>
-            <Route path="/breakfast">
-              <Breakfast />
-            </Route>
-            <Route path="/Foods">
-              <Foods />
-            </Route>
-            <Route path="/Contact">
-              <Contact />
-            </Route>
-            <Route path="/">
-              <Profile />
-            </Route>
-          </Switch>
-        </main>
-      </div>
-    </Router>
+      <Router>
+        <div className={"app"}>
+          <DrawerRWD />
+          <main className={"main"}>
+            <Switch>
+              <Route path="/MyFoods">
+                <MyFoods />
+              </Route>
+              <Route path="/Form">
+                <Form />
+              </Route>
+              <Route path="/supper">
+                <Supper />
+              </Route>
+              <Route path="/snack">
+                <Snack />
+              </Route>
+              <Route path="/dinner">
+                <Dinner />
+              </Route>
+              <Route path="/lunch">
+                <Lunch />
+              </Route>
+              <Route path="/breakfast">
+                <Breakfast />
+              </Route>
+              <Route path="/Foods">
+                <Foods />
+              </Route>
+              <Route path="/Contact">
+                <Contact />
+              </Route>
+              <Route path="/">
+                <Profile />
+              </Route>
+            </Switch>
+          </main>
+        </div>
+      </Router>
     </LanguageProvider>
   );
 };

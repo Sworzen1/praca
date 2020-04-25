@@ -46,14 +46,14 @@ const useStyles = makeStyles((theme) => ({
     top: 10,
   },
   data: {
-    position:"absolute",
-    color:"white",
-    display:"none",
-    "@media(min-width:768px)":{
-      display:"block",
-      right:235
-    }
-      },
+    position: "absolute",
+    color: "white",
+    display: "none",
+    "@media(min-width:768px)": {
+      display: "block",
+      right: 235,
+    },
+  },
 }));
 
 function DrawerRWD(props) {
@@ -82,8 +82,8 @@ function DrawerRWD(props) {
           </IconButton>
         </Toolbar>
         <div className={classes.data}>
-        <h2>{new Date().toLocaleDateString()}</h2>
-      </div>
+          <h2>{new Date().toLocaleDateString()}</h2>
+        </div>
         <LanguageSelector />
         <Button
           size="large"

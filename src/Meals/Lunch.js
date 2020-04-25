@@ -1,30 +1,30 @@
 import React from "react";
 import FoodCard from "./FoodCard";
 import { makeStyles } from "@material-ui/core/styles";
-import recipeslunch from "./recipeslunch"
+import recipeslunch from "./recipeslunch";
 
 const useStyles = makeStyles({
   main1: {
     marginTop: "50px",
     height: "60vh",
-    "@media(min-width:768px)":{
-     marginTop:"70px" 
+    "@media(min-width:768px)": {
+      marginTop: "70px",
     },
-    "@media(min-width:1024px)":{
-      marginTop:"80px"
-    }
+    "@media(min-width:1024px)": {
+      marginTop: "80px",
+    },
   },
   main2: {
     display: "grid",
-    gridTemplateColumns:"auto ",
-    backgroundColor:"#17161a",
-    "@media(min-width:768px)":{
-      gridTemplateColumns:"auto auto"
+    gridTemplateColumns: "auto ",
+    backgroundColor: "#17161a",
+    "@media(min-width:768px)": {
+      gridTemplateColumns: "auto auto",
     },
-    "@media(min-width:1024px)":{
-      gridTemplateColumns:"auto auto auto"
+    "@media(min-width:1024px)": {
+      gridTemplateColumns: "auto auto auto",
     },
-  }
+  },
 });
 
 const Lunch = () => {
@@ -33,12 +33,21 @@ const Lunch = () => {
   return (
     <div className={classes.main1}>
       <div className={classes.main2}>
-      {recipeslunch.map(item=>{
-        return (
-          <FoodCard title={item.title} description={item.description} titleRecipe={item.titleRecipe} 
-          descRecipe={item.descRecipe} carbo={item.carbo} protein={item.protein} fat={item.fat} calories={item.calories} image={item.image}/>
-        )
-      })}
+        {recipeslunch.map((item) => {
+          return (
+            <FoodCard
+              title={item.title}
+              description={item.description}
+              titleRecipe={item.titleRecipe}
+              descRecipe={item.descRecipe}
+              carbo={item.carbo}
+              protein={item.protein}
+              fat={item.fat}
+              calories={item.calories}
+              image={item.image}
+            />
+          );
+        })}
       </div>
     </div>
   );

@@ -4,8 +4,10 @@ import { Text } from "./Lang/Language";
 
 const Foods = () => {
   return (
-    <div className="navbar1"> <p className="menuTitle">MENU</p>
-      <ul className="menu1" >
+    <div className="navbar1">
+      {" "}
+      <p className="menuTitle">MENU</p>
+      <ul className="menu1">
         <li>
           <Link to="/breakfast">
             <i class="fas fa-egg"></i>

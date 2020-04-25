@@ -41,9 +41,9 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: "50px",
   },
-  button:{
-    textDecoration:"none"
-  }
+  button: {
+    textDecoration: "none",
+  },
 }));
 
 const SingIn = () => {
@@ -100,7 +100,6 @@ const SingIn = () => {
               size="large"
               color="secondary"
               onClick={LoggedIn}
-              
             >
               Login
             </Button>

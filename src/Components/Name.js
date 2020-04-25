@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
       margin: 15,
     },
     "@media(min-width:1024px)": {
-      width:"250px",
-      height:"70px",
+      width: "250px",
+      height: "70px",
     },
   },
 
@@ -40,10 +40,10 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     textAlign: "center",
     "@media(min-width:1024px)": {
-      marginLeft:"15px",
-      fontSize:"18px",
-      width:"70px",
-      marginTop:"-13px"
+      marginLeft: "15px",
+      fontSize: "18px",
+      width: "70px",
+      marginTop: "-13px",
     },
   },
   h2: {
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     height: "inherit",
     "@media(min-width:1024px)": {
-      fontSize:"20px"
+      fontSize: "20px",
     },
   },
 }));

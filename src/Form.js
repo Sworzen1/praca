@@ -66,7 +66,7 @@ const Form = () => {
       setHeight1("Enter your height");
       setWeight1("Enter your weight");
     }
-  });
+  }, [localStorage.myLanguage]);
 
   const inputs = [
     {
@@ -102,7 +102,6 @@ const Form = () => {
     <div className={classes.box1}>
       <div className={classes.box2}>
         <form onSubmit={handleSubmit}>
-        
           {inputs.map((item) => {
             return (
               <InputItem
@@ -114,6 +113,7 @@ const Form = () => {
                 max={item.max}
                 type={item.type}
                 htmlFor={item.htmlFor}
+                key={item.title}
               />
             );
           })}
